@@ -1,0 +1,14 @@
+create field f1
+create virologist v1
+create virologist v2
+move v1 f1
+move v2 f1
+create gloves g1
+create gloves g2
+add i v1 g1
+add i v2 g2
+create chorea c1
+add a v1 c1
+make v1 c1 c2
+use vir v1 v2 c2
+show

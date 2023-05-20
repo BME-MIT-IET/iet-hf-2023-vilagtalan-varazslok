@@ -1,0 +1,40 @@
+Bejutott
+MasikGame:
+fields: F1
+
+Timer:
+steppables: newF, S
+
+Field:
+F1:
+neighbours: 
+virologists: V1, V2
+
+Virologist:
+V1:
+nucleotide: 0, aminoacid: 0, maxMaterial: 100, field: F1
+agentsKnown: F
+agentsCreated: newF
+viruses: S
+vaccines: 
+items: 
+
+V2:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: F1
+agentsKnown: 
+agentsCreated: 
+viruses: 
+vaccines: 
+items: 
+
+Chorea:
+F:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: null
+
+newF:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: V1
+
+Stun:
+S:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: V1
+

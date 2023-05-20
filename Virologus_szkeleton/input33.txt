@@ -1,0 +1,6 @@
+create virologist v1
+create stun s
+add vir v1 s
+show
+tick 10
+show

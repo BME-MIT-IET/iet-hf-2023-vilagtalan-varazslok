@@ -1,0 +1,48 @@
+Game:
+fields: ns
+
+Timer:
+steppables: 
+
+Field:
+ns:
+neighbours: 
+virologists: v1
+
+NucleotideStorage:
+ns:
+active: true
+
+Virologist:
+v1:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: ns
+agentsKnown: 
+agentsCreated: 
+viruses: 
+vaccines: 
+items: 
+
+Game:
+fields: ns
+
+Timer:
+steppables: 
+
+Field:
+ns:
+neighbours: 
+virologists: v1
+
+NucleotideStorage:
+ns:
+active: true
+
+Virologist:
+v1:
+nucleotide: 100, aminoacid: 50, maxMaterial: 100, field: ns
+agentsKnown: 
+agentsCreated: 
+viruses: 
+vaccines: 
+items: 
+

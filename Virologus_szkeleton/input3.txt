@@ -1,0 +1,7 @@
+create virologist v1
+create shelter sh
+create backpack b
+place i sh b
+move v1 sh
+pickup v1 sh
+show

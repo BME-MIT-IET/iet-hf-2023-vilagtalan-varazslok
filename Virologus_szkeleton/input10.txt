@@ -1,0 +1,13 @@
+create laboratory l1
+create chorea c1
+create antichorea ac1
+create chorea c2
+create antichorea ac2
+create virologist v1
+add a v1 c1
+add a v1 ac1
+place a l1 c2
+place a l1 ac2
+move v1 l1
+pickup v1 l1
+show

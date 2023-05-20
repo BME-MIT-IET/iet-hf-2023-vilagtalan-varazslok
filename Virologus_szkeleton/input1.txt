@@ -1,0 +1,7 @@
+create field f1
+create field f2
+link f1 f2
+create virologist v1
+move v1 f1
+move v1 f2
+show

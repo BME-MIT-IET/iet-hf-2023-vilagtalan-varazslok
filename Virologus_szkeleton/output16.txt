@@ -1,0 +1,24 @@
+Bejutott
+MasikGame:
+fields: 
+
+Timer:
+steppables: s1
+
+Virologist:
+v1:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: null
+agentsKnown: afor1
+agentsCreated: 
+viruses: s1
+vaccines: 
+items: 
+
+Stun:
+s1:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: v1
+
+AntiForget:
+afor1:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: null
+

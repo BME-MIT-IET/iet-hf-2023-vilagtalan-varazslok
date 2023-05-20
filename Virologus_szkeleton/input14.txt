@@ -1,0 +1,7 @@
+create field f1
+create virologist v1
+create virologist v2
+move v1 f1
+move v2 f1
+steal v2 v1
+show

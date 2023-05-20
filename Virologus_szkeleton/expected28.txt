@@ -1,0 +1,74 @@
+Game:
+fields: f1
+
+Timer:
+steppables: c4
+
+Field:
+f1:
+neighbours: 
+virologists: v1, v2
+
+Virologist:
+v1:
+nucleotide: 0, aminoacid: 0, maxMaterial: 100, field: f1
+agentsKnown: c3
+agentsCreated: c4
+viruses: 
+vaccines: 
+items: 
+
+v2:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: f1
+agentsKnown: 
+agentsCreated: 
+viruses: 
+vaccines: 
+items: g
+
+Chorea:
+c3:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: null
+
+c4:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: v1
+
+Gloves:
+g:
+durability: 1
+
+Game:
+fields: f1
+
+Timer:
+steppables: c4
+
+Field:
+f1:
+neighbours: 
+virologists: v1, v2
+
+Virologist:
+v1:
+nucleotide: 0, aminoacid: 0, maxMaterial: 100, field: f1
+agentsKnown: c3
+agentsCreated: 
+viruses: c4
+vaccines: 
+items: 
+
+v2:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: f1
+agentsKnown: 
+agentsCreated: 
+viruses: 
+vaccines: 
+items: 
+
+Chorea:
+c3:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: null
+
+c4:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 5, ttl: 3, virologist: v1
+

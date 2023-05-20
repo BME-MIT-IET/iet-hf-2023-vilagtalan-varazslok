@@ -1,0 +1,6 @@
+create virologist v1
+create nucleotidestorage ns
+move v1 ns
+show
+pickup v1 ns
+show

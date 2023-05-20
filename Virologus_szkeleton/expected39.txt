@@ -1,0 +1,105 @@
+Game:
+fields: f1
+
+Timer:
+steppables: f, s, c, b
+
+Field:
+f1:
+neighbours: 
+virologists: v1, v2
+
+Virologist:
+v1:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: f1
+agentsKnown: 
+agentsCreated: 
+viruses: b
+vaccines: bi
+items: 
+
+v2:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: f1
+agentsKnown: fo, so, co
+agentsCreated: f, s, c
+viruses: 
+vaccines: 
+items: 
+
+Bear:
+b:
+aminoCost: 50, nucleoCost: 50, duration: -1, timeLeft: -1, ttl: -1, virologist: v1
+
+Chorea:
+co:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist:null
+
+c:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: v2
+
+Forget:
+fo:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist:null
+
+f:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: v2
+
+Stun:
+so:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist:null
+
+s:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: v2
+
+BearImmunity:
+bi:
+aminoCost: 50, nucleoCost: 50, duration: -1, timeLeft: -1, ttl: -1, virologist: v1
+
+Game:
+fields: f1
+
+Timer:
+steppables: b
+
+Field:
+f1:
+neighbours: 
+virologists: v1, v2
+
+Virologist:
+v1:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: f1
+agentsKnown: 
+agentsCreated: 
+viruses: b
+vaccines: bi
+items: 
+
+v2:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: f1
+agentsKnown: fo, so, co
+agentsCreated: 
+viruses: 
+vaccines: 
+items: 
+
+Bear:
+b:
+aminoCost: 50, nucleoCost: 50, duration: -1, timeLeft: -1, ttl: -1, virologist: v1
+
+Chorea:
+co:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist:null
+
+Forget:
+fo:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist:null
+
+Stun:
+so:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist:null
+
+BearImmunity:
+bi:
+aminoCost: 50, nucleoCost: 50, duration: -1, timeLeft: -1, ttl: -1, virologist: v1
+

@@ -1,0 +1,9 @@
+create virologist v1
+create cape c1
+create cape c2
+create shelter sh
+place i sh c2
+move v1 sh
+add i v1 c1
+pickup v1 sh
+show

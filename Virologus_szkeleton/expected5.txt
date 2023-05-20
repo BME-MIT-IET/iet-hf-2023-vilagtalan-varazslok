@@ -1,0 +1,31 @@
+Game:
+fields: sh
+
+Timer:
+steppables: 
+
+Field:
+sh:
+neighbours: 
+virologists: v1
+
+Shelter:
+sh:
+items: c2
+
+Virologist:
+v1:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: sh
+agentsKnown: 
+agentsCreated: 
+viruses: 
+vaccines: 
+items: c1
+
+Cape:
+c1:
+
+
+c2:
+
+

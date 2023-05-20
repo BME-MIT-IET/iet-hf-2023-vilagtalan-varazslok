@@ -1,0 +1,5 @@
+create virologist v1
+create forget for1
+add a v1 for1
+make v1 for1 for2
+show

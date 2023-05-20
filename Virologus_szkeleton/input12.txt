@@ -1,0 +1,15 @@
+create field f1
+create virologist v1
+create virologist v2
+move v1 f1
+move v2 f1
+create cape c1
+create backpack b1
+create backpack b2
+add i v1 c1
+add i v1 b1
+add i v2 b2
+create stun s1
+add vir v1 s1
+steal v2 v1
+show

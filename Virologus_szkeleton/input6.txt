@@ -1,0 +1,13 @@
+create virologist v1
+create cape c
+create backpack b
+create gloves g
+create axe a
+create shelter sh
+add i v1 b
+add i v1 c
+add i v1 g
+place i sh a
+move v1 sh
+pickup v1 sh
+show

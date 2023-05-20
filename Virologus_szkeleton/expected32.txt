@@ -1,0 +1,34 @@
+Game:
+fields: 
+
+Timer:
+steppables: as
+
+Virologist:
+v1:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: null
+agentsKnown: 
+agentsCreated: 
+viruses: 
+vaccines: as
+items: 
+
+AntiStun:
+as:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: v1
+
+Game:
+fields: 
+
+Timer:
+steppables: 
+
+Virologist:
+v1:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: null
+agentsKnown: 
+agentsCreated: 
+viruses: 
+vaccines: 
+items: 
+

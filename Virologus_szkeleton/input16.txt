@@ -1,0 +1,7 @@
+create virologist v1
+create antiforget afor1
+create stun s1
+add a v1 afor1
+add vir v1 s1
+make v1 afor1 afor2
+show

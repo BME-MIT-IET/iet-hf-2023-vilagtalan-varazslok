@@ -1,0 +1,6 @@
+create virolgist v
+create axe ax
+add i v ax
+show
+drop v i ax
+show

@@ -1,0 +1,13 @@
+create field f1
+create virologist v1
+create virologist v2
+move v1 f1
+move v2 f1
+create cape c1
+add i v1 c1
+create stun s1
+add vir v1 s1
+create chorea c2
+add vir v2 c2
+steal v2 v1
+show

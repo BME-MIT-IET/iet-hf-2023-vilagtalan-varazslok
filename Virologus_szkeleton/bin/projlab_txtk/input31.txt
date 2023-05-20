@@ -1,0 +1,7 @@
+create virologist v1
+create antistun as
+add a v1 as
+make v1 as as2
+show
+tick 3
+show

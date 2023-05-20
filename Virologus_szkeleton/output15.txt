@@ -1,0 +1,22 @@
+Game:
+fields: 
+
+Timer:
+steppables: for2
+
+Virologist:
+v1:
+nucleotide: 0, aminoacid: 0, maxMaterial: 100, field: null
+agentsKnown: for1
+agentsCreated: for2
+viruses: 
+vaccines: 
+items: 
+
+Forget:
+for1:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: null
+
+for2:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: v1
+

@@ -1,0 +1,9 @@
+create virologist v1
+create laboratory lab
+create antistun as
+create stun s
+place a lab as
+place a lab s
+move v1 lab
+pickup v1 lab
+show

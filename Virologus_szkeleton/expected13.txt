@@ -1,0 +1,40 @@
+Game:
+fields: f1
+
+Timer:
+steppables: s1, c2
+
+Field:
+f1:
+neighbours: 
+virologists: v1, v2
+
+Virologist:
+v1:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: f1
+agentsKnown: 
+agentsCreated: 
+viruses: s1
+vaccines: 
+items: c1
+
+v2:
+nucleotide: 50, aminoacid: 50, maxMaterial: 100, field: f1
+agentsKnown: 
+agentsCreated: 
+viruses: c2
+vaccines: 
+items: 
+
+Chorea:
+c2:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: v2
+
+Stun:
+s1:
+aminoCost: 50, nucleoCost: 50, duration: 10, timeLeft: 10, ttl: 3, virologist: v1
+
+Cape:
+c1:
+
+

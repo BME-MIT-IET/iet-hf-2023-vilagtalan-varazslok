@@ -1,0 +1,12 @@
+create field F1
+create virologist V1
+create virologist V2
+move V1 F1
+move V2 F1
+create antichorea AF
+create chorea F
+add a V1 F
+make V1 F newF
+add vac V2 AF
+use vir V1 V2 newF
+show

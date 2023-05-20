@@ -1,0 +1,6 @@
+create virologist v1
+setmat v1 n 10
+create stun s1
+add a v1 s1
+make v1 s1 s2
+show

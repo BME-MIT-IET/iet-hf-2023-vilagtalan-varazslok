@@ -1,0 +1,6 @@
+create virologist v1
+create aminoacidstorage as
+move v1 as
+show
+pickup v1 as
+show

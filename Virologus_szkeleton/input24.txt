@@ -1,0 +1,13 @@
+create field F1
+create virologist V1
+create virologist V2
+move V1 F1
+move V2 F1
+create chorea F
+add a V1 F
+make V1 F newF
+create cape C
+add i V2 C
+random 1
+use vir V1 V2 newF
+show

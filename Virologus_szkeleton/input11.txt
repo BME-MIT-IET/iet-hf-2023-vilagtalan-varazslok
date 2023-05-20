@@ -1,0 +1,17 @@
+create laboratory l1
+create chorea c1
+create antichorea ac1
+place a l1 c1
+place a l1 ac1
+create virologist v1
+create stun s1
+create antistun as1
+create forget for1
+create antiforget afor1
+add a v1 s1
+add a v1 as1
+add a v1 for1
+add a v1 afor1
+move v1 l1
+pickup v1 l1
+show
