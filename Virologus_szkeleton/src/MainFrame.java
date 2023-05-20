@@ -25,8 +25,8 @@ public class MainFrame extends JFrame{
 	private static final long serialVersionUID = 1L;
 	
 	
-	//A kezelõfelület gombjai és combobox-ai, (remélhetõleg) beszédes nevekkel, a játékos akciói kezdeményezhetõk és 
-	//paraméterezhetõk velük
+	//A kezelï¿½felï¿½let gombjai ï¿½s combobox-ai, (remï¿½lhetï¿½leg) beszï¿½des nevekkel, a jï¿½tï¿½kos akciï¿½i kezdemï¿½nyezhetï¿½k ï¿½s 
+	//paramï¿½terezhetï¿½k velï¿½k
 	private JButton moveButton;
 	private JComboBox<Object> fieldsBox;
 	private JButton pickUpButton;
@@ -44,7 +44,7 @@ public class MainFrame extends JFrame{
 	private JComboBox<Object> droppableItems;
 	private JButton skipButton;
 	
-	//Az állapotok megjelenítésére szolgáló label-ek
+	//Az ï¿½llapotok megjelenï¿½tï¿½sï¿½re szolgï¿½lï¿½ label-ek
 	private JLabel lName;
 	private JLabel lField;
 	private JLabel lMaxMat;
@@ -57,17 +57,17 @@ public class MainFrame extends JFrame{
 	private JLabel lItems;
 	private JLabel lActions;
 	
-	//Az új játék menüpontja
+	//Az ï¿½j jï¿½tï¿½k menï¿½pontja
 	private JMenuItem newGame;
 	
-	//A játéktér
+	//A jï¿½tï¿½ktï¿½r
 	private PlayArea playArea;
-	//A játékot irányító kontroller
+	//A jï¿½tï¿½kot irï¿½nyï¿½tï¿½ kontroller
 	private Control controller;
 	
-	//Frissíti a combobox tartalmát
-	// @param box - a frissítendõ comboBox
-	// @param list - a lista, amivel feltültésre kerül
+	//Frissï¿½ti a combobox tartalmï¿½t
+	// @param box - a frissï¿½tendï¿½ comboBox
+	// @param list - a lista, amivel feltï¿½ltï¿½sre kerï¿½l
 	private void comboBoxRefresher(JComboBox<Object> box, List<Object> list) {
 		DefaultComboBoxModel<Object> model = new DefaultComboBoxModel<>();
         for(Object iter : list) {
@@ -76,9 +76,9 @@ public class MainFrame extends JFrame{
         box.setModel(model);
 	}
 	
-	//Konstruktor. A megjelenítést inicializálja.
+	//Konstruktor. A megjelenï¿½tï¿½st inicializï¿½lja.
 	public MainFrame() {
-		//Alapvetõ megjelenítés
+		//Alapvetï¿½ megjelenï¿½tï¿½s
 		this.setVisible(true);
         this.setTitle("Game");
         this.setSize(700, 700);
@@ -88,7 +88,7 @@ public class MainFrame extends JFrame{
         
         controller = new Control(this);
         
-        //Layoutok kiosztása
+        //Layoutok kiosztï¿½sa
 		setLayout(new BorderLayout());
 		playArea = new PlayArea();
 		add(playArea, BorderLayout.CENTER);
@@ -98,7 +98,7 @@ public class MainFrame extends JFrame{
 		right.setVisible(true);
 		add(right, BorderLayout.EAST);
 		
-		//menü feltöltése
+		//menï¿½ feltï¿½ltï¿½se
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		JMenu menu = new JMenu("File");
@@ -107,7 +107,7 @@ public class MainFrame extends JFrame{
 		newGame.addActionListener(new newGameActionListener());
 		menu.add(newGame);
 		
-		//Kiírások kezelése, bal oldal beállítása, feltöltése
+		//Kiï¿½rï¿½sok kezelï¿½se, bal oldal beï¿½llï¿½tï¿½sa, feltï¿½ltï¿½se
 		left.setPreferredSize(new Dimension(450, 700));
 		left.setLayout(new GridLayout(11, 1));
 		lName = new JLabel(" Name: ");
@@ -133,7 +133,7 @@ public class MainFrame extends JFrame{
 		left.add(lItems);
 		left.add(lActions);
 		
-		//A jobb oldal feltöltése
+		//A jobb oldal feltï¿½ltï¿½se
 		right.setLayout(new GridLayout(8, 1));
 		JPanel pMove = new JPanel();
 		JPanel pPickUp = new JPanel();
@@ -152,7 +152,7 @@ public class MainFrame extends JFrame{
 		right.add(pDrop);
 		right.add(pSkip);
 		
-		//Mozgásgomb és a paraméterezõ comboBox hozzáadása, eseménykezelõ regisztrálása
+		//Mozgï¿½sgomb ï¿½s a paramï¿½terezï¿½ comboBox hozzï¿½adï¿½sa, esemï¿½nykezelï¿½ regisztrï¿½lï¿½sa
 		moveButton = new JButton("Move");
 		Object[] os = {};
 		fieldsBox = new JComboBox<>(os);
@@ -160,12 +160,12 @@ public class MainFrame extends JFrame{
 		pMove.add(moveButton);
 		moveButton.addActionListener(new moveButtonActionListener());
 		
-		//felvevõgomb hozzáadása, eseménykezelõ regisztrálása
+		//felvevï¿½gomb hozzï¿½adï¿½sa, esemï¿½nykezelï¿½ regisztrï¿½lï¿½sa
 		pickUpButton = new JButton("Pick up");
 		pPickUp.add(pickUpButton);
 		pickUpButton.addActionListener(new pickUpButtonActionListener());
 		
-		//Lopásgomb és a paraméterezõ comboBox hozzáadása, eseménykezelõ regisztrálása
+		//Lopï¿½sgomb ï¿½s a paramï¿½terezï¿½ comboBox hozzï¿½adï¿½sa, esemï¿½nykezelï¿½ regisztrï¿½lï¿½sa
 		stealButton = new JButton("Steal");
 		Object[] os2 = {};
 		stealTargets = new JComboBox<>(os2);
@@ -173,7 +173,7 @@ public class MainFrame extends JFrame{
 		pSteal.add(stealButton);
 		stealButton.addActionListener(new stealButtonActionListener());
 		
-		//Ágensgyártó gomb és a paraméterezõ comboBox hozzáadása, eseménykezelõ regisztrálása
+		//ï¿½gensgyï¿½rtï¿½ gomb ï¿½s a paramï¿½terezï¿½ comboBox hozzï¿½adï¿½sa, esemï¿½nykezelï¿½ regisztrï¿½lï¿½sa
 		createAgentButton = new JButton("Create agent");
 		Object[] os3 = {};
 		createablesBox = new JComboBox<>(os3);
@@ -181,7 +181,7 @@ public class MainFrame extends JFrame{
 		pCreate.add(createAgentButton);
 		createAgentButton.addActionListener(new createAgentButtonActionListener());
 		
-		//Víruskenõ gomb és a paraméterezõ comboBoxok hozzáadása, eseménykezelõ regisztrálása
+		//Vï¿½ruskenï¿½ gomb ï¿½s a paramï¿½terezï¿½ comboBoxok hozzï¿½adï¿½sa, esemï¿½nykezelï¿½ regisztrï¿½lï¿½sa
 		useVirusButton = new JButton("Use virus");
 		Object[] os4 = {};
 		Object[] os5 = {};
@@ -192,7 +192,7 @@ public class MainFrame extends JFrame{
 		pVirus.add(useVirusButton);
 		useVirusButton.addActionListener(new useVirusButtonActionListener());
 		
-		//Víruskenõ gomb és a paraméterezõ comboBoxok hozzáadása, eseménykezelõ regisztrálása
+		//Vï¿½ruskenï¿½ gomb ï¿½s a paramï¿½terezï¿½ comboBoxok hozzï¿½adï¿½sa, esemï¿½nykezelï¿½ regisztrï¿½lï¿½sa
 		useVaccineButton = new JButton("Use vaccine");
 		Object[] os6 = {};
 		Object[] os7 = {};
@@ -203,7 +203,7 @@ public class MainFrame extends JFrame{
 		pVaccine.add(useVaccineButton);
 		useVaccineButton.addActionListener(new useVaccineButtonActionListener());
 		
-		//VTárgyeldobó gomb és a paraméterezõ comboBox hozzáadása, eseménykezelõ regisztrálása
+		//VTï¿½rgyeldobï¿½ gomb ï¿½s a paramï¿½terezï¿½ comboBox hozzï¿½adï¿½sa, esemï¿½nykezelï¿½ regisztrï¿½lï¿½sa
 		dropItemButton = new JButton("Drop item");
 		Object[] os8 = {};
 		droppableItems = new JComboBox<>(os8);
@@ -211,7 +211,7 @@ public class MainFrame extends JFrame{
 		pDrop.add(dropItemButton);
 		dropItemButton.addActionListener(new dropItemButtonActionListener());
 		
-		//Kör vége gomb hozzáadása, eseménykezelõ regisztrálása
+		//Kï¿½r vï¿½ge gomb hozzï¿½adï¿½sa, esemï¿½nykezelï¿½ regisztrï¿½lï¿½sa
 		skipButton = new JButton("Skip turn");
 		pSkip.add(skipButton);
 		skipButton.addActionListener(new skipButtonActionListener());
@@ -219,8 +219,8 @@ public class MainFrame extends JFrame{
 		this.pack();
 	}
 	
-	//Rajzolófüggvény. A játék aktuális állása szerint kitölti a paraméterezõ comboBoxokat
-	//az aktuális elemekkel, amelyeket lekér a modellbõl.
+	//Rajzolï¿½fï¿½ggvï¿½ny. A jï¿½tï¿½k aktuï¿½lis ï¿½llï¿½sa szerint kitï¿½lti a paramï¿½terezï¿½ comboBoxokat
+	//az aktuï¿½lis elemekkel, amelyeket lekï¿½r a modellbï¿½l.
 	public void draw() {
 		Virologist v = controller.getCurrentVirologist();
 		Field f = v.getField();
@@ -466,11 +466,11 @@ public class MainFrame extends JFrame{
 		lItems.setText(items);
 		
 		lActions.setText(" Actions left: "+controller.getActionsLeft());
-		//Pálya kirajzolása
+		//Pï¿½lya kirajzolï¿½sa
 		playArea.draw();
 	}
 	
-	//A játék végét kezeli. Kiiírja a nyertest, lezárja a gombokat.
+	//A jï¿½tï¿½k vï¿½gï¿½t kezeli. Kiiï¿½rja a nyertest, lezï¿½rja a gombokat.
 	public void endGame() {
 		
 		moveButton.setEnabled(false);
@@ -501,14 +501,14 @@ public class MainFrame extends JFrame{
         JOptionPane.showMessageDialog(null, vv.getName()+" won the game! Congratulations!");
 	}
 	
-	//Visszaadja a pályát
-	// @return - a pálya, ahova kirajzolásra kerül az a modellbeli pálya
+	//Visszaadja a pï¿½lyï¿½t
+	// @return - a pï¿½lya, ahova kirajzolï¿½sra kerï¿½l az a modellbeli pï¿½lya
 	public PlayArea getPlayArea() {
 		return playArea;
 	}
 	
-	//Az új játák indításának eseménykezelõje
-	//Az actionPerformed függvényben elkéri a felhasználótól a beállításokat, és új játékot indít.
+	//Az ï¿½j jï¿½tï¿½k indï¿½tï¿½sï¿½nak esemï¿½nykezelï¿½je
+	//Az actionPerformed fï¿½ggvï¿½nyben elkï¿½ri a felhasznï¿½lï¿½tï¿½l a beï¿½llï¿½tï¿½sokat, ï¿½s ï¿½j jï¿½tï¿½kot indï¿½t.
 	private class newGameActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -529,8 +529,8 @@ public class MainFrame extends JFrame{
             }
         }
 	}
-	//A mozgás gomb eseménykezelõje
-	//Az actionPerformed függvényben kezeli a mozgatást
+	//A mozgï¿½s gomb esemï¿½nykezelï¿½je
+	//Az actionPerformed fï¿½ggvï¿½nyben kezeli a mozgatï¿½st
 	private class moveButtonActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -544,16 +544,16 @@ public class MainFrame extends JFrame{
 			}
         }
 	}
-	//A felvétel gomb eseménykezelõje
-	//Az actionPerformed függvényben kezeli a felvételt
+	//A felvï¿½tel gomb esemï¿½nykezelï¿½je
+	//Az actionPerformed fï¿½ggvï¿½nyben kezeli a felvï¿½telt
 	private class pickUpButtonActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			controller.pickUp();
         }
 	}
-	//A lopás gomb eseménykezelõje
-	//Az actionPerformed függvényben kezeli a lopást
+	//A lopï¿½s gomb esemï¿½nykezelï¿½je
+	//Az actionPerformed fï¿½ggvï¿½nyben kezeli a lopï¿½st
 	private class stealButtonActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -567,8 +567,8 @@ public class MainFrame extends JFrame{
 			}
         }
 	}
-	//Az ágenskészítés gomb eseménykezelõje
-	//Az actionPerformed függvényben kezeli az ágenskészítést
+	//Az ï¿½genskï¿½szï¿½tï¿½s gomb esemï¿½nykezelï¿½je
+	//Az actionPerformed fï¿½ggvï¿½nyben kezeli az ï¿½genskï¿½szï¿½tï¿½st
 	private class createAgentButtonActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -619,8 +619,8 @@ public class MainFrame extends JFrame{
         }
 	}
 	
-	//A vírushasználat gomb eseménykezelõje
-	//Az actionPerformed függvényben kezeli a vírushasználatot
+	//A vï¿½rushasznï¿½lat gomb esemï¿½nykezelï¿½je
+	//Az actionPerformed fï¿½ggvï¿½nyben kezeli a vï¿½rushasznï¿½latot
 	private class useVirusButtonActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -662,8 +662,8 @@ public class MainFrame extends JFrame{
 			}
         }
 	}
-	//A vakcinahasználat gomb eseménykezelõje
-	//Az actionPerformed függvényben kezeli a vakcinahasználatot
+	//A vakcinahasznï¿½lat gomb esemï¿½nykezelï¿½je
+	//Az actionPerformed fï¿½ggvï¿½nyben kezeli a vakcinahasznï¿½latot
 	private class useVaccineButtonActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -705,8 +705,8 @@ public class MainFrame extends JFrame{
 			}
         }
 	}
-	//A tárygeldobás gomb eseménykezelõje
-	//Az actionPerformed függvényben kezeli a tárgya eldobását
+	//A tï¿½rygeldobï¿½s gomb esemï¿½nykezelï¿½je
+	//Az actionPerformed fï¿½ggvï¿½nyben kezeli a tï¿½rgya eldobï¿½sï¿½t
 	private class dropItemButtonActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -744,8 +744,8 @@ public class MainFrame extends JFrame{
         }
 	}
 	
-	//A skip gomb eseménykezelõje
-	//Az actionPerformed függvényben kezeli a kör átadását
+	//A skip gomb esemï¿½nykezelï¿½je
+	//Az actionPerformed fï¿½ggvï¿½nyben kezeli a kï¿½r ï¿½tadï¿½sï¿½t
 	private class skipButtonActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {

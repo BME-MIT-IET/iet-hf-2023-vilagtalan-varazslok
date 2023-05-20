@@ -1,0 +1,27 @@
+create virologist v1
+create virologist v2
+create field f1
+move v1 f1
+move v2 f1
+create forget fo
+create stun so
+create chorea co
+crate bear b
+create bearimmunity bi
+add vir v1 b
+add vac v1 bi
+add a v2 fo
+add a v2 so
+add a v2 co
+setmat v2 a 100
+setmat v2 n 100
+make v2 fo f
+make v2 so s
+setmat v2 a 100
+setamt v2 n 100
+make v2 co c
+show
+use vir v2 v1 f
+use vir v2 v1 s
+use vir v2 v1 c
+show

@@ -1,0 +1,17 @@
+create virologist v1
+create virologist v2
+create virologist v3
+create field f1
+create field f2
+link f1 f2
+move v1 f1
+move v2 f1
+move v3 f2
+create bear b
+create bearimmunity bi
+add vir v1 b
+add vac v1 bi
+show
+random 0
+tick 1
+show

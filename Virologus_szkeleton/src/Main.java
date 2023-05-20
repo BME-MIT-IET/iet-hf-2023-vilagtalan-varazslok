@@ -2,8 +2,8 @@
 
 public class Main {
 	
-	//Main függvény, létrehozza a grafikus megjelenítést kezelõ frame-et
-	// @param args - ez kell minden main függvénybe
+	//Main fï¿½ggvï¿½ny, lï¿½trehozza a grafikus megjelenï¿½tï¿½st kezelï¿½ frame-et
+	// @param args - ez kell minden main fï¿½ggvï¿½nybe
 	public static void main(String[] args) {
 		MainFrame frame = new MainFrame();
 		frame.setLocationRelativeTo(null);
