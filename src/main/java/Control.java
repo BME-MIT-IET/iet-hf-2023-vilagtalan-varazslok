@@ -129,8 +129,9 @@ public class Control {
 	public void startGame(String file, int virologistsNum) {
 		actionsLeft = 3;
 		currentIndex = 0;
-		try {
-			BufferedReader br = new BufferedReader(new FileReader(file));
+		
+		try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+			
 			String image = br.readLine();
 			ArrayList<Field> fs = new ArrayList<Field>();
 			ArrayList<FieldView> fvs = new ArrayList<FieldView>();
@@ -170,7 +171,7 @@ public class Control {
 					fs.get(i).addNeighbour(fs.get(Integer.parseInt(lineSplit[j])-1));
 				}
 			}
-			br.close();
+			
 			
 			Virologist v1 = new Virologist();
 			vs.add(v1);
@@ -207,6 +208,7 @@ public class Control {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 	
 	//Visszaadja a virol�gust, akinek a k�re van
