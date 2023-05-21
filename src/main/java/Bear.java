@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Bear extends Virus {
+	private static Random rand=new Random();
 
 	// Bear oszt�ly konstruktora
 	public Bear() {
@@ -51,7 +52,7 @@ public class Bear extends Virus {
 			
 			if(neighbours.size()!=0) {
 				f.removeVirologist(virologist);
-				int r= new Random().nextInt(neighbours.size());
+				int r= rand.nextInt(neighbours.size());
 				Field newf = neighbours.get(r);
 				newf.destroyed();
 		        newf.addVirologist(virologist);

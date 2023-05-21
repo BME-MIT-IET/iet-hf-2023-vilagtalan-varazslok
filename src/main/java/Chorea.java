@@ -5,6 +5,7 @@ import java.util.Random;
 
 
 public class Chorea extends Virus {
+	private static Random rand=new Random();
 
 	// Chorea oszt�ly konstruktora
 	public Chorea() {
@@ -36,7 +37,7 @@ public class Chorea extends Virus {
 			ArrayList<Field> neighbours = f.getNeighbours();
 			if(neighbours.size()!=0) {
 				f.removeVirologist(virologist);
-				int r= new Random().nextInt(neighbours.size());
+				int r= rand.nextInt(neighbours.size());
 				Field newf = neighbours.get(r);
 		        newf.addVirologist(virologist);
 		        newf.movedOn(virologist);

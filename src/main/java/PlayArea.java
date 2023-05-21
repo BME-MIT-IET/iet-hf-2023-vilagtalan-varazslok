@@ -18,7 +18,7 @@ public class PlayArea extends JPanel{
 	private static final long serialVersionUID = 1L;
 	
 	//A h�tt�r
-	private Image background;
+	private Image backgroundIm;
 	//A p�lya k�pe
 	private Image mapImage;
 	//View-k list�i
@@ -38,14 +38,14 @@ public class PlayArea extends JPanel{
 	// @param g - a Graphics objektum, amire rajzol
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.drawImage(background, 0, 0, null);
+		g.drawImage(backgroundIm, 0, 0, null);
 	}
 	
 	//Rajzol�f�ggv�ny
 	//A p�ly�ra annak aktu�lis �llapot�t rajzolja ki
 	public void draw() {
-		background = new BufferedImage(620, 640, BufferedImage.TYPE_INT_RGB);
-		Graphics g = background.getGraphics();
+		backgroundIm = new BufferedImage(620, 640, BufferedImage.TYPE_INT_RGB);
+		Graphics g = backgroundIm.getGraphics();
 		g.drawImage(mapImage, 0, 0, Color.white, null);
 		
 		FieldView currentF = null;
@@ -112,7 +112,7 @@ public class PlayArea extends JPanel{
 		fieldViews = f;
 		virologistViews = v;
 		try {
-			background = ImageIO.read(new File(file));
+			backgroundIm = ImageIO.read(new File(file));
 			mapImage = ImageIO.read(new File(file));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
