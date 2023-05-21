@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Game {
+	private static Random rand=new Random();
 	
 	//A j�t�kban tal�lhat� t�rgyak list�ja
 	private ArrayList<Item> items = new ArrayList<Item>();
@@ -42,7 +43,6 @@ public class Game {
 		agents.add(new AntiStun());
 		agents.add(new Bear());
 		ArrayList<Agent> temp;
-		Random rand = new Random();
 		int r = rand.nextInt(3);
 		temp = new ArrayList<Agent>();
 		temp.add(agents.get(6));

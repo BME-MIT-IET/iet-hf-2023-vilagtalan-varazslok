@@ -246,7 +246,7 @@ public class Virologist {
 				return;
 			}				
 		}
-		if(ag.getAminoCost()<=aminoacid & ag.getNucleoCost()<=nucleotide) {
+		if(ag.getAminoCost()<=aminoacid && ag.getNucleoCost()<=nucleotide) {
 			aminoacid-=ag.getAminoCost();
 			nucleotide-=ag.getNucleoCost();
 			Agent newagent=ag.create();
