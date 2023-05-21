@@ -1,3 +1,4 @@
+package main.java;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -5,7 +6,7 @@ import java.util.Random;
 
 public class Chorea extends Virus {
 
-	// Chorea osztály konstruktora
+	// Chorea osztï¿½ly konstruktora
 	public Chorea() {
 		aminoacidCost = 50;
 		nucleotideCost = 50;
@@ -15,19 +16,19 @@ public class Chorea extends Virus {
 		virologist = null;
 	}
 	
-	// Létrehoz egy új, ugyanolyan típusú vírust
-	// @return - az új vírus
+	// Lï¿½trehoz egy ï¿½j, ugyanolyan tï¿½pusï¿½ vï¿½rust
+	// @return - az ï¿½j vï¿½rus
 	public Agent create() {
 		return new Chorea();
 	}
 	
-	// Visszaadja, hogy a vírus hatása alatt álló virológus cselekvõképes-e
-    // @return - az eredmény
+	// Visszaadja, hogy a vï¿½rus hatï¿½sa alatt ï¿½llï¿½ virolï¿½gus cselekvï¿½kï¿½pes-e
+    // @return - az eredmï¿½ny
 	public boolean canAct() {
 		return false;
 	}
 	
-	// Idõben lépteti a vírust, véletlenszerûen lépteti a hatása alatt álló virológust
+	// Idï¿½ben lï¿½pteti a vï¿½rust, vï¿½letlenszerï¿½en lï¿½pteti a hatï¿½sa alatt ï¿½llï¿½ virolï¿½gust
 	public void step() {
 		super.step();
 		if(virologist.getActiveViruses().contains(this)) {

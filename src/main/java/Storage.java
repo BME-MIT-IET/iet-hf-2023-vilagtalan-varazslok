@@ -1,17 +1,17 @@
-
+package main.java;
 public abstract class Storage extends Field{
-	//Jelzi, mûködik-e a raktár
+	//Jelzi, mï¿½kï¿½dik-e a raktï¿½r
 	protected boolean active;
 	//Konstruktor
 	public Storage() {
 		active=true;
 	}
-	//Elpusztul a raktár (mûködõképesség falg hamis)
+	//Elpusztul a raktï¿½r (mï¿½kï¿½dï¿½kï¿½pessï¿½g falg hamis)
 	public void destroyed() {
 		active=false;
 	}
-	//Visszaadja a mûködõképességet
-	// @return - a mûködõképesség
+	//Visszaadja a mï¿½kï¿½dï¿½kï¿½pessï¿½get
+	// @return - a mï¿½kï¿½dï¿½kï¿½pessï¿½g
 	public boolean getActive() {
 		return active;
 	}

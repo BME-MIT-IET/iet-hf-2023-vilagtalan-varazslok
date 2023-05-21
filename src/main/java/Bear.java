@@ -1,9 +1,11 @@
+
+package main.java;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Bear extends Virus {
 
-	// Bear osztály konstruktora
+	// Bear osztï¿½ly konstruktora
 	public Bear() {
 		aminoacidCost = 50;
 		nucleotideCost = 50;
@@ -13,20 +15,20 @@ public class Bear extends Virus {
 		virologist = null;
 	}
 	
-	// Létrehoz egy új, ugyanolyan típusú vírust
-	// @return - az új vírus
+	// Lï¿½trehoz egy ï¿½j, ugyanolyan tï¿½pusï¿½ vï¿½rust
+	// @return - az ï¿½j vï¿½rus
 	public Agent create() {
         Bear newb = new Bear();
         return newb;
     }
 	
-	// Visszaadja, hogy a vírus hatása alatt álló virológus cselekvõképes-e
-    // @return - az eredmény
+	// Visszaadja, hogy a vï¿½rus hatï¿½sa alatt ï¿½llï¿½ virolï¿½gus cselekvï¿½kï¿½pes-e
+    // @return - az eredmï¿½ny
 	public boolean canAct() {
 		return false;
 	}
 	
-	// Idõben lépteti a vírust, elõször terjeszti a medvefertõzést, majd véletlenszerûen lépteti a virológust, majd ismét terjeszti a fertõzést
+	// Idï¿½ben lï¿½pteti a vï¿½rust, elï¿½szï¿½r terjeszti a medvefertï¿½zï¿½st, majd vï¿½letlenszerï¿½en lï¿½pteti a virolï¿½gust, majd ismï¿½t terjeszti a fertï¿½zï¿½st
 	public void step() {
 			Field f = virologist.getField();
 			
@@ -71,7 +73,7 @@ public class Bear extends Virus {
 		
 	}
 	
-	// A vírus hatást fejt ki, az áldozat elveszíti a rajta lévõ aktív vírusokat
+	// A vï¿½rus hatï¿½st fejt ki, az ï¿½ldozat elveszï¿½ti a rajta lï¿½vï¿½ aktï¿½v vï¿½rusokat
 	public void effect() {
 		ArrayList<Virus> viruses = virologist.getActiveViruses();
 		for(int i = 0; i < viruses.size(); i++) {

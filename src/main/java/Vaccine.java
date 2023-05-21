@@ -1,12 +1,12 @@
-
+package main.java;
 public abstract class Vaccine extends Agent {
 
-	// Visszaadja, hogy a vakcina immunitást biztosít-e egy adott vírus ellen
-	// @param v - a támadó vírus
-	// @return - az eredmény
+	// Visszaadja, hogy a vakcina immunitï¿½st biztosï¿½t-e egy adott vï¿½rus ellen
+	// @param v - a tï¿½madï¿½ vï¿½rus
+	// @return - az eredmï¿½ny
 	public abstract boolean counter(Virus v);
 	
-	// Idõben lépteti a vakcinát
+	// Idï¿½ben lï¿½pteti a vakcinï¿½t
 	public void step() {
 		super.step();
 		if(timeLeft > 0)
@@ -16,8 +16,8 @@ public abstract class Vaccine extends Agent {
 		}
 	}
 	
-	// Létrehoz egy új, ugyanolyan típusú vakcinát
-	// @return - az új vírus
+	// Lï¿½trehoz egy ï¿½j, ugyanolyan tï¿½pusï¿½ vakcinï¿½t
+	// @return - az ï¿½j vï¿½rus
 	public abstract Agent create();
 
 }

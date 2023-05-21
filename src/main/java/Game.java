@@ -1,20 +1,21 @@
+package main.java;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Game {
 	
-	//A játékban található tárgyak listája
+	//A jï¿½tï¿½kban talï¿½lhatï¿½ tï¿½rgyak listï¿½ja
 	private ArrayList<Item> items = new ArrayList<Item>();
-	//A játékban található virológusok listája
+	//A jï¿½tï¿½kban talï¿½lhatï¿½ virolï¿½gusok listï¿½ja
 	private ArrayList<Virologist> virologists = new ArrayList<Virologist>();
-	//A játékban található ágensek listája
+	//A jï¿½tï¿½kban talï¿½lhatï¿½ ï¿½gensek listï¿½ja
 	private static ArrayList<Agent> agents = new ArrayList<Agent>();
-	//A játékban található mezõk listája
+	//A jï¿½tï¿½kban talï¿½lhatï¿½ mezï¿½k listï¿½ja
 	private ArrayList<Field> fields = new ArrayList<Field>();
 	
 	private static Game game = null;
 	
-	/// Létrehozza a pályát, elhelyezi a genetikai kódokat, a tárgyakat, illetve a virológusokat is.
+	/// Lï¿½trehozza a pï¿½lyï¿½t, elhelyezi a genetikai kï¿½dokat, a tï¿½rgyakat, illetve a virolï¿½gusokat is.
 	public void generateMap(ArrayList<Field> f, ArrayList<Virologist> v) {
 		fields = f;
 		virologists = v;
@@ -87,8 +88,8 @@ public class Game {
 		
 	}
 
-	///  Ellenõrzi, hogy elegendõ genetikai kóddal rendelkezik e a játékos, a játék megnyeréséhez
-	/// @param n az adott virológus jelenlegi megszerzett ágenseinek száma
+	///  Ellenï¿½rzi, hogy elegendï¿½ genetikai kï¿½ddal rendelkezik e a jï¿½tï¿½kos, a jï¿½tï¿½k megnyerï¿½sï¿½hez
+	/// @param n az adott virolï¿½gus jelenlegi megszerzett ï¿½genseinek szï¿½ma
 	public boolean checkEndGame(int n){
 		if(n==agents.size()-1) {
 			return true;
@@ -96,25 +97,25 @@ public class Game {
 		return false;
 	}
 	
-	//Eltávolítja a virológust a játékból, ha az létezik
-	// @param v - az eltávolítandó virológus
+	//Eltï¿½volï¿½tja a virolï¿½gust a jï¿½tï¿½kbï¿½l, ha az lï¿½tezik
+	// @param v - az eltï¿½volï¿½tandï¿½ virolï¿½gus
 	public void removeVirologist(Virologist v) {
 		if(virologists.contains(v)) {
 			virologists.remove(v);
 		}
 	}
 	
-	//Visszaadja a játékban szerpelõ virológusokat
-	// @return - a virológusok listája
+	//Visszaadja a jï¿½tï¿½kban szerpelï¿½ virolï¿½gusokat
+	// @return - a virolï¿½gusok listï¿½ja
 	public ArrayList<Virologist> getVirologists() {
 		return virologists;
 	}
 	
-	///Game konstruktor, privát, ezzel biztosítja, hogy az osztály Singleton ként mûködik
+	///Game konstruktor, privï¿½t, ezzel biztosï¿½tja, hogy az osztï¿½ly Singleton kï¿½nt mï¿½kï¿½dik
 	private Game() {
 	}
 	
-	///a függvény biztosítja, hogy az osztály Singleton ként mûküdik
+	///a fï¿½ggvï¿½ny biztosï¿½tja, hogy az osztï¿½ly Singleton kï¿½nt mï¿½kï¿½dik
 	public static Game instance() {
 		if(game==null) {
 			game = new Game();

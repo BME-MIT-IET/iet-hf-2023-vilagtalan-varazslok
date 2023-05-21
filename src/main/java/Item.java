@@ -1,4 +1,4 @@
-
+package main.java;
 public abstract class Item {
 	
 	/**Akkor hivodik meg, ha megtamadtak viselojet.

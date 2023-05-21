@@ -1,17 +1,18 @@
+package main.java;
 import java.util.ArrayList;
 
 public class Axe extends Item{
-	//a balta élessége, használhatósága
+	//a balta ï¿½lessï¿½ge, hasznï¿½lhatï¿½sï¿½ga
 	private boolean active;
 	
-	//A balta osztály konstruktora
+	//A balta osztï¿½ly konstruktora
 	public Axe() {
 		active = true;
 	}
 	
-	//Kifejti a balta mozgás közbeni hatását. Az aktuális mezõn tartózkodó összes virológust megbaltázza
-	//majd ha ez sikeres, kicsorbítha a baltát
-	// @param v - a virológus, aki baltát használ
+	//Kifejti a balta mozgï¿½s kï¿½zbeni hatï¿½sï¿½t. Az aktuï¿½lis mezï¿½n tartï¿½zkodï¿½ ï¿½sszes virolï¿½gust megbaltï¿½zza
+	//majd ha ez sikeres, kicsorbï¿½tha a baltï¿½t
+	// @param v - a virolï¿½gus, aki baltï¿½t hasznï¿½l
 	public void moveEffect(Virologist v) {
 		if(active) {
 			Field f1 = v.getField();
@@ -25,8 +26,8 @@ public class Axe extends Item{
 		return;
 	}
 	
-	//Visszaadja a balta élességét
-	// @return - a balta élessége
+	//Visszaadja a balta ï¿½lessï¿½gï¿½t
+	// @return - a balta ï¿½lessï¿½ge
 	public boolean getActive() {
 		return active;
 	}

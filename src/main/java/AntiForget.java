@@ -1,7 +1,7 @@
-
+package main.java;
 public class AntiForget extends Vaccine {
 
-	// AntiForget osztály konstruktora
+	// AntiForget osztï¿½ly konstruktora
 	public AntiForget() {
 		aminoacidCost = 50;
 		nucleotideCost = 50;
@@ -11,9 +11,9 @@ public class AntiForget extends Vaccine {
 		virologist = null;
 	}
 	
-	// Visszaadja, hogy a vakcina immunitást biztosít-e egy adott vírus ellen
-	// @param v - a támadó vírus
-	// @return - az eredmény
+	// Visszaadja, hogy a vakcina immunitï¿½st biztosï¿½t-e egy adott vï¿½rus ellen
+	// @param v - a tï¿½madï¿½ vï¿½rus
+	// @return - az eredmï¿½ny
 	public boolean counter(Virus v) {
 		if(v.getClass()==Forget.class) {
 			return true;
@@ -21,8 +21,8 @@ public class AntiForget extends Vaccine {
 		return false;
 	}
 	
-	// Létrehoz egy új, ugyanolyan típusú vakcinát
-	// @return - az új vakcina
+	// Lï¿½trehoz egy ï¿½j, ugyanolyan tï¿½pusï¿½ vakcinï¿½t
+	// @return - az ï¿½j vakcina
 	public Agent create() {
 		return new AntiForget();
 	}

@@ -1,7 +1,7 @@
-
+package main.java;
 public class BearImmunity extends Vaccine{
 	
-	// AntiForget osztály konstruktora
+	// AntiForget osztï¿½ly konstruktora
 	public BearImmunity() {
 		aminoacidCost = 50;
 		nucleotideCost = 50;
@@ -11,15 +11,15 @@ public class BearImmunity extends Vaccine{
 		virologist = null;
 	}
 	
-	// Visszaadja, hogy a vakcina immunitást biztosít-e egy adott vírus ellen
-	// @param v - a támadó vírus
-	// @return - az eredmény
+	// Visszaadja, hogy a vakcina immunitï¿½st biztosï¿½t-e egy adott vï¿½rus ellen
+	// @param v - a tï¿½madï¿½ vï¿½rus
+	// @return - az eredmï¿½ny
 	public boolean counter(Virus v) {
 		return true;
 	}
 	
-	// Létrehoz egy új, ugyanolyan típusú vakcinát
-	// @return - az új vakcina
+	// Lï¿½trehoz egy ï¿½j, ugyanolyan tï¿½pusï¿½ vakcinï¿½t
+	// @return - az ï¿½j vakcina
 	public Agent create() {
 		BearImmunity newbie = new BearImmunity();
 		return newbie;

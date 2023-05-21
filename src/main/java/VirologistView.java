@@ -1,22 +1,23 @@
+package main.java;
 import java.awt.Color;
 
 public class VirologistView {
-	//A virológus neve
+	//A virolï¿½gus neve
 	private String name;
-	//A virológus színe
+	//A virolï¿½gus szï¿½ne
 	private Color color;
-	//A virológus offsetjének x koordinátája
+	//A virolï¿½gus offsetjï¿½nek x koordinï¿½tï¿½ja
 	private int offX;
-	//A virológus offsetjének y koordinátája
+	//A virolï¿½gus offsetjï¿½nek y koordinï¿½tï¿½ja
 	private int offY;
-	//A virológus modellbeli párja
+	//A virolï¿½gus modellbeli pï¿½rja
 	private Virologist virologist;
 	//Konstruktor
-	// @param N - a virológus neve
-	// @param C - a virológus színe
-	// @param X - a virológus offsetje (x)
-	// @param Y - a virológus offsetje (y)
-	// @param V - a virológus modellbeli párja
+	// @param N - a virolï¿½gus neve
+	// @param C - a virolï¿½gus szï¿½ne
+	// @param X - a virolï¿½gus offsetje (x)
+	// @param Y - a virolï¿½gus offsetje (y)
+	// @param V - a virolï¿½gus modellbeli pï¿½rja
 	public VirologistView(String N, Color C, int X, int Y, Virologist V) {
 		name = N;
 		color = C;
@@ -25,28 +26,28 @@ public class VirologistView {
 		virologist = V;
 	}
 	
-	//Visszaadja a virológus modellbeli párját
-	// @return - a virológus modellbeli párja
+	//Visszaadja a virolï¿½gus modellbeli pï¿½rjï¿½t
+	// @return - a virolï¿½gus modellbeli pï¿½rja
 	public Virologist getVirologist() {
 		return virologist;
 	}
-	//Visszaadja a virológus nevét
-	// @return - a virológus neve
+	//Visszaadja a virolï¿½gus nevï¿½t
+	// @return - a virolï¿½gus neve
 	public String getName() {
 		return name;
 	}
-	//Visszaadja a virológus színét
-	// @return - a virológus színe
+	//Visszaadja a virolï¿½gus szï¿½nï¿½t
+	// @return - a virolï¿½gus szï¿½ne
 	public Color getColor() {
 		return color;
 	}
-	//Visszaadja a virológus x szerinti offsetjét
-	// @return - a virológus x szerinti offsetje
+	//Visszaadja a virolï¿½gus x szerinti offsetjï¿½t
+	// @return - a virolï¿½gus x szerinti offsetje
 	public int getX() {
 		return offX;
 	}
-	//Visszaadja a virológus y szerinti offsetjét
-	// @return - a virológus y szerinti offsetje
+	//Visszaadja a virolï¿½gus y szerinti offsetjï¿½t
+	// @return - a virolï¿½gus y szerinti offsetje
 	public int getY() {
 		return offY;
 	}

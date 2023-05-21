@@ -1,3 +1,4 @@
+package main.java;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 import java.awt.Image;
@@ -16,11 +17,11 @@ public class PlayArea extends JPanel{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	//A háttér
+	//A hï¿½ttï¿½r
 	private Image background;
-	//A pálya képe
+	//A pï¿½lya kï¿½pe
 	private Image mapImage;
-	//View-k listái
+	//View-k listï¿½i
 	private ArrayList<FieldView> fieldViews;
 	private ArrayList<VirologistView> virologistViews;
 	
@@ -33,22 +34,22 @@ public class PlayArea extends JPanel{
 		
 	}
 	
-	//Komponens kirajzolása
+	//Komponens kirajzolï¿½sa
 	// @param g - a Graphics objektum, amire rajzol
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.drawImage(background, 0, 0, null);
 	}
 	
-	//Rajzolófüggvény
-	//A pályára annak aktuális állapotát rajzolja ki
+	//Rajzolï¿½fï¿½ggvï¿½ny
+	//A pï¿½lyï¿½ra annak aktuï¿½lis ï¿½llapotï¿½t rajzolja ki
 	public void draw() {
 		background = new BufferedImage(620, 640, BufferedImage.TYPE_INT_RGB);
 		Graphics g = background.getGraphics();
 		g.drawImage(mapImage, 0, 0, Color.white, null);
 		
 		FieldView currentF = null;
-		//Virológusok (ill. medvék) kirajzolása
+		//Virolï¿½gusok (ill. medvï¿½k) kirajzolï¿½sa
 		for(int i = 0; i < fieldViews.size(); i++) {
 			currentF = fieldViews.get(i);
 			
@@ -74,12 +75,12 @@ public class PlayArea extends JPanel{
 					}
 				}
 			}
-			//Ha kifogyott az óvóhely
+			//Ha kifogyott az ï¿½vï¿½hely
 			if(currentF.getField() instanceof Shelter && ((Shelter)currentF.getField()).getItem()!=null) {
 				g.setColor(Color.darkGray);
 				g.drawRoundRect(currentF.getX(), currentF.getY(), 8, 8, 5, 5);
 			}
-			//Ha elpusztult az aminosav-raktár
+			//Ha elpusztult az aminosav-raktï¿½r
 			if(currentF.getField() instanceof AminoacidStorage && !((AminoacidStorage)currentF.getField()).getActive()) {
 				g.setColor(Color.magenta);
 				Font prev = g.getFont();
@@ -87,7 +88,7 @@ public class PlayArea extends JPanel{
 				g.drawString("X", currentF.getX()-12, currentF.getY()+12);
 				g.setFont(prev);
 			}
-			//Ha elpusztult a nukleotid-raktár
+			//Ha elpusztult a nukleotid-raktï¿½r
 			if(currentF.getField() instanceof NucleotideStorage && !((NucleotideStorage)currentF.getField()).getActive()) {
 				g.setColor(Color.magenta);
 				Font prev = g.getFont();
@@ -95,7 +96,7 @@ public class PlayArea extends JPanel{
 				g.drawString("X", currentF.getX()-12, currentF.getY()+14);
 				g.setFont(prev);
 			}
-			//Mezõk azonosítóinak kiírása
+			//Mezï¿½k azonosï¿½tï¿½inak kiï¿½rï¿½sa
 			g.setColor(Color.black);
 			g.drawString(""+currentF.getID(), currentF.getX()-7, currentF.getY());
 			
@@ -103,10 +104,10 @@ public class PlayArea extends JPanel{
 		repaint();
 	}
 	
-	//A pálya megjelenítsésnek beállításai
-	// @param f - mezõ view-k, amiket használ
-	// @param v - virológus view-k, amiket használ
-	// @param file - fájl, ahonnan a képeket olvassa
+	//A pï¿½lya megjelenï¿½tsï¿½snek beï¿½llï¿½tï¿½sai
+	// @param f - mezï¿½ view-k, amiket hasznï¿½l
+	// @param v - virolï¿½gus view-k, amiket hasznï¿½l
+	// @param file - fï¿½jl, ahonnan a kï¿½peket olvassa
 	public void setup(ArrayList<FieldView> f, ArrayList<VirologistView> v, String file) {
 		fieldViews = f;
 		virologistViews = v;
@@ -119,13 +120,13 @@ public class PlayArea extends JPanel{
 		}
 	}
 	
-	//Visszaadja a használt virológusnézeteket
-	// @return - a virológusnézetek listája
+	//Visszaadja a hasznï¿½lt virolï¿½gusnï¿½zeteket
+	// @return - a virolï¿½gusnï¿½zetek listï¿½ja
 	public ArrayList<VirologistView> getVirologistViews() {
 		return virologistViews;
 	}
-	//Visszaadja a használt mezõnézeteket
-	// @return - a mezõnézetek listája
+	//Visszaadja a hasznï¿½lt mezï¿½nï¿½zeteket
+	// @return - a mezï¿½nï¿½zetek listï¿½ja
 	public ArrayList<FieldView> getFieldViews() {
 		return fieldViews;
 	}

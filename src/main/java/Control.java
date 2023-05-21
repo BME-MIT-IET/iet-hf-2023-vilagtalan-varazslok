@@ -1,3 +1,4 @@
+package main.java;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -6,25 +7,25 @@ import java.util.ArrayList;
 import java.awt.Color;
 
 public class Control {
-	//Az aktuális virológus
+	//Az aktuï¿½lis virolï¿½gus
 	private Virologist currentVirologist;
 	//A jelenlegi index
 	private int currentIndex;
-	//A játékos hátralévõ akcióinak száma
+	//A jï¿½tï¿½kos hï¿½tralï¿½vï¿½ akciï¿½inak szï¿½ma
 	private int actionsLeft;
-	//A megjelenésért felelõ frame
+	//A megjelenï¿½sï¿½rt felelï¿½ frame
 	private MainFrame frame;
 	
 	//Konstruktor
-	// @param f - a játékhoz használt frame
+	// @param f - a jï¿½tï¿½khoz hasznï¿½lt frame
 	public Control(MainFrame f) {
 		frame = f;
 		actionsLeft = 3;
 	}
 	
-	//A mozgásparancsot kezelõ függvény, meghívja a modell kapcsolódó függvényét.
-	//Csökkenti az akciók számát, ha elfogynak, skippel
-	// @param f - amelyik mezõre mozog
+	//A mozgï¿½sparancsot kezelï¿½ fï¿½ggvï¿½ny, meghï¿½vja a modell kapcsolï¿½dï¿½ fï¿½ggvï¿½nyï¿½t.
+	//Csï¿½kkenti az akciï¿½k szï¿½mï¿½t, ha elfogynak, skippel
+	// @param f - amelyik mezï¿½re mozog
 	public void move(Field f) {
 		currentVirologist.move(f);
 		actionsLeft--;
@@ -34,8 +35,8 @@ public class Control {
 		frame.draw();
 	}
 	
-	//A felvétel-parancsot kezelõ függvény, az adott mezõn a megfelelõ pick-up-line (hihi) meghívását kezdeményezi.
-	//Csökkenti az akciók számát, ha elfogynak, skippel. Azt is megnézi, nyert-e valaki.
+	//A felvï¿½tel-parancsot kezelï¿½ fï¿½ggvï¿½ny, az adott mezï¿½n a megfelelï¿½ pick-up-line (hihi) meghï¿½vï¿½sï¿½t kezdemï¿½nyezi.
+	//Csï¿½kkenti az akciï¿½k szï¿½mï¿½t, ha elfogynak, skippel. Azt is megnï¿½zi, nyert-e valaki.
 	public void pickUp() {
 		currentVirologist.pickUp();
 		if(Game.instance().checkEndGame(currentVirologist.getAgentsKnown().size())) {
@@ -48,9 +49,9 @@ public class Control {
 		frame.draw();
 	}
 	
-	//A lopásparancsot (izé jóhiszemû eltulajdonítás) kezelõ függvény, meghívja a modell kapcsolódó függvényét.
-	//Csökkenti az akciók számát, ha elfogynak, skippel
-	// @param v - a virológus, akitõl taktikai beszerzés (lopás) folyik
+	//A lopï¿½sparancsot (izï¿½ jï¿½hiszemï¿½ eltulajdonï¿½tï¿½s) kezelï¿½ fï¿½ggvï¿½ny, meghï¿½vja a modell kapcsolï¿½dï¿½ fï¿½ggvï¿½nyï¿½t.
+	//Csï¿½kkenti az akciï¿½k szï¿½mï¿½t, ha elfogynak, skippel
+	// @param v - a virolï¿½gus, akitï¿½l taktikai beszerzï¿½s (lopï¿½s) folyik
 	public void steal(Virologist v) {
 		currentVirologist.steal(v);
 		actionsLeft--;
@@ -60,9 +61,9 @@ public class Control {
 		frame.draw();
 	}
 	
-	//DIY James Bond helyett az ágenskészítés parancsát kezelõ függvény, meghívja a modell kapcsolódó függvényét.
-	//Csökkenti az akciók számát, ha elfogynak, skippel
-	// @param a - az elkészítendõ ágens
+	//DIY James Bond helyett az ï¿½genskï¿½szï¿½tï¿½s parancsï¿½t kezelï¿½ fï¿½ggvï¿½ny, meghï¿½vja a modell kapcsolï¿½dï¿½ fï¿½ggvï¿½nyï¿½t.
+	//Csï¿½kkenti az akciï¿½k szï¿½mï¿½t, ha elfogynak, skippel
+	// @param a - az elkï¿½szï¿½tendï¿½ ï¿½gens
 	public void createAgent(Agent a) {
 		currentVirologist.createAgent(a);
 		actionsLeft--;
@@ -72,10 +73,10 @@ public class Control {
 		frame.draw();
 	}
 	
-	//A vírushasználat parancsát kezelõ függvény, meghívja a modell kapcsolódó függvényét.
-	//Csökkenti az akciók számát, ha elfogynak, skippel
-	// @param v - a felhasználandó vírus
-	// @param t - a virológus, akin a vírus használva lesz
+	//A vï¿½rushasznï¿½lat parancsï¿½t kezelï¿½ fï¿½ggvï¿½ny, meghï¿½vja a modell kapcsolï¿½dï¿½ fï¿½ggvï¿½nyï¿½t.
+	//Csï¿½kkenti az akciï¿½k szï¿½mï¿½t, ha elfogynak, skippel
+	// @param v - a felhasznï¿½landï¿½ vï¿½rus
+	// @param t - a virolï¿½gus, akin a vï¿½rus hasznï¿½lva lesz
 	public void useVirus(Virologist t, Virus v) {
 		currentVirologist.useVirus(t, v);
 		actionsLeft--;
@@ -84,10 +85,10 @@ public class Control {
 		}
 		frame.draw();
 	}
-	//A vakcinahasználat parancsát kezelõ függvény, meghívja a modell kapcsolódó függvényét.
-	//Csökkenti az akciók számát, ha elfogynak, skippel
-	// @param v - a felhasználandó vakcina
-	// @param t - a virológus, akin a vakcina használva lesz
+	//A vakcinahasznï¿½lat parancsï¿½t kezelï¿½ fï¿½ggvï¿½ny, meghï¿½vja a modell kapcsolï¿½dï¿½ fï¿½ggvï¿½nyï¿½t.
+	//Csï¿½kkenti az akciï¿½k szï¿½mï¿½t, ha elfogynak, skippel
+	// @param v - a felhasznï¿½landï¿½ vakcina
+	// @param t - a virolï¿½gus, akin a vakcina hasznï¿½lva lesz
 	public void useVaccine(Virologist t, Vaccine v) {
 		currentVirologist.useVaccine(t, v);
 		actionsLeft--;
@@ -96,9 +97,9 @@ public class Control {
 		}
 		frame.draw();
 	}
-	//A tárgyeldobás parancsát kezelõ függvény, meghívja a modell kapcsolódó függvényét.
-	//Csökkenti az akciók számát, ha elfogynak, skippel
-	// @param i - az eldobandó tárgy
+	//A tï¿½rgyeldobï¿½s parancsï¿½t kezelï¿½ fï¿½ggvï¿½ny, meghï¿½vja a modell kapcsolï¿½dï¿½ fï¿½ggvï¿½nyï¿½t.
+	//Csï¿½kkenti az akciï¿½k szï¿½mï¿½t, ha elfogynak, skippel
+	// @param i - az eldobandï¿½ tï¿½rgy
 	public void dropItem(Item i) {
 		currentVirologist.loseItem(i);
 		actionsLeft--;
@@ -107,7 +108,7 @@ public class Control {
 		}
 		frame.draw();
 	}
-	//Átadja a kört a következõ játékosnak, és beállítja az ezzel kapcsolatos változókat. Ha mindenki köre volt, a 
+	//ï¿½tadja a kï¿½rt a kï¿½vetkezï¿½ jï¿½tï¿½kosnak, ï¿½s beï¿½llï¿½tja az ezzel kapcsolatos vï¿½ltozï¿½kat. Ha mindenki kï¿½re volt, a 
 	//timer tickel egyet.
 	public void skipTurn() {
 		actionsLeft = 3;
@@ -121,10 +122,10 @@ public class Control {
 		frame.draw();
 	}
 	
-	//Beolvassa a pályát, létrehozza és inicializálja a view objektumokat, és a modell felhazsnált objektumait
-	//Összeköti a mezõket, kirajzoltatja a pályát.
-	// @param file - a fájl, ahonnan a pálya beolvasásra kerül
-	// @param virologistsNum - a játékosok száma
+	//Beolvassa a pï¿½lyï¿½t, lï¿½trehozza ï¿½s inicializï¿½lja a view objektumokat, ï¿½s a modell felhazsnï¿½lt objektumait
+	//ï¿½sszekï¿½ti a mezï¿½ket, kirajzoltatja a pï¿½lyï¿½t.
+	// @param file - a fï¿½jl, ahonnan a pï¿½lya beolvasï¿½sra kerï¿½l
+	// @param virologistsNum - a jï¿½tï¿½kosok szï¿½ma
 	public void startGame(String file, int virologistsNum) {
 		actionsLeft = 3;
 		currentIndex = 0;
@@ -208,14 +209,14 @@ public class Control {
 		}
 	}
 	
-	//Visszaadja a virológust, akinek a köre van
-	// @return - az aktuális virológus
+	//Visszaadja a virolï¿½gust, akinek a kï¿½re van
+	// @return - az aktuï¿½lis virolï¿½gus
 	public Virologist getCurrentVirologist() {
 		return currentVirologist;
 	}
 	
-	//Visszaadja, hány akciója van még a soron levõ játékosnak
-	// @return - a hátralévõ akciók
+	//Visszaadja, hï¿½ny akciï¿½ja van mï¿½g a soron levï¿½ jï¿½tï¿½kosnak
+	// @return - a hï¿½tralï¿½vï¿½ akciï¿½k
 	public int getActionsLeft() {
 		return actionsLeft;
 	}

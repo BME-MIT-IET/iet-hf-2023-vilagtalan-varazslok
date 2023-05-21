@@ -1,8 +1,9 @@
+package main.java;
 import java.util.ArrayList;
 
 public class Forget extends Virus{
 
-	// Forget osztály konstruktora
+	// Forget osztï¿½ly konstruktora
 	public Forget() {
 		aminoacidCost = 50;
 		nucleotideCost = 50;
@@ -12,13 +13,13 @@ public class Forget extends Virus{
 		virologist = null;
 	}
 	
-	// Létrehoz egy új, ugyanolyan típusú vírust
-	// @return - az új vírus
+	// Lï¿½trehoz egy ï¿½j, ugyanolyan tï¿½pusï¿½ vï¿½rust
+	// @return - az ï¿½j vï¿½rus
 	public Agent create() {
 		return new Forget();
 	}
 	
-	// A vírus hatást fejt ki, az áldozat elfelejti az ismert ágenseit
+	// A vï¿½rus hatï¿½st fejt ki, az ï¿½ldozat elfelejti az ismert ï¿½genseit
 	public void effect() {
 		virologist.setAgentsKnown(new ArrayList<Agent>());
 	}

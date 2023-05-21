@@ -1,50 +1,51 @@
+package main.java;
 import java.util.ArrayList;
 
 public class Field {
 	private ArrayList<Field>neighbours=new ArrayList<Field>();
 	private ArrayList<Virologist> virologist;
-	//Mezõ konstruktor
+	//Mezï¿½ konstruktor
 	public Field() {
 		virologist = new ArrayList<Virologist>();
 	}
 
-	//Hozzáadja a virológust a mezõhöz
-	//@param v - a hozzáadandó virológus
+	//Hozzï¿½adja a virolï¿½gust a mezï¿½hï¿½z
+	//@param v - a hozzï¿½adandï¿½ virolï¿½gus
 	public void addVirologist(Virologist v) {
 		virologist.add(v);
 	}
-	//Eltávolítja a virológust a mezõröl
-	//@param v - a Eltávolítandó virológus
+	//Eltï¿½volï¿½tja a virolï¿½gust a mezï¿½rï¿½l
+	//@param v - a Eltï¿½volï¿½tandï¿½ virolï¿½gus
 	public void removeVirologist(Virologist v) {
 		virologist.remove(v);
 	}
-	// Visszaadja a mezõ szomszédjait
-	// @return - visszaadja a szomszédait
+	// Visszaadja a mezï¿½ szomszï¿½djait
+	// @return - visszaadja a szomszï¿½dait
 	public ArrayList<Field> getNeighbours(){
 		return neighbours;
 		
 	}
-	//Hozzáad egy szomszédos mezõt
-	// @param f - a hozzáadandó mezõ
+	//Hozzï¿½ad egy szomszï¿½dos mezï¿½t
+	// @param f - a hozzï¿½adandï¿½ mezï¿½
 	public void addNeighbour(Field f) {
 		neighbours.add(f);
 	}
-	// Az üres mezõn levõ dolgot felveszi a virológus
-	// @ param v - virológust aki megpróbál felvenni valamit
+	// Az ï¿½res mezï¿½n levï¿½ dolgot felveszi a virolï¿½gus
+	// @ param v - virolï¿½gust aki megprï¿½bï¿½l felvenni valamit
 	public void pickedUp(Virologist v) {
 	}
 	
-	//A mezõre lép egy virológus
-	// @param v - a virológus, aki rálép
+	//A mezï¿½re lï¿½p egy virolï¿½gus
+	// @param v - a virolï¿½gus, aki rï¿½lï¿½p
 	public void movedOn(Virologist v) {
 	}
 	
-	//A mezõ elpusztul (itt nem, de felüldefiniálható)
+	//A mezï¿½ elpusztul (itt nem, de felï¿½ldefiniï¿½lhatï¿½)
 	public void destroyed() {
 	}
 	
-	//Visszaadja a mezõn lévõ virológusokat
-	// return - a mezõn lévõ virológusok listája
+	//Visszaadja a mezï¿½n lï¿½vï¿½ virolï¿½gusokat
+	// return - a mezï¿½n lï¿½vï¿½ virolï¿½gusok listï¿½ja
 	public  ArrayList<Virologist> getVirologists() {
 		return virologist;
 	}
