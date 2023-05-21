@@ -1,19 +1,19 @@
-
+package main.java;
 public class FieldView {
-	//A mezõ x koordinátája
+	//A mezï¿½ x koordinï¿½tï¿½ja
 	private int x;
-	//A mezõ y koordinátája
+	//A mezï¿½ y koordinï¿½tï¿½ja
 	private int y;
-	//A mezõ azonostíója
+	//A mezï¿½ azonostï¿½ï¿½ja
 	private int id;
-	//A mezõ modellbeli megfelelõje
+	//A mezï¿½ modellbeli megfelelï¿½je
 	private Field f;
 	
 	//Konstruktor
-	// @param fi - A modellbeli mezõ
-	// @param a - skálázandó x koordináta
-	// @param b - skálázandó y koordináta
-	// @param ids - azonosító
+	// @param fi - A modellbeli mezï¿½
+	// @param a - skï¿½lï¿½zandï¿½ x koordinï¿½ta
+	// @param b - skï¿½lï¿½zandï¿½ y koordinï¿½ta
+	// @param ids - azonosï¿½tï¿½
 	public FieldView(Field fi, int a, int b, int ids) {
 		x=a /5;
 		y=b /5;
@@ -21,23 +21,23 @@ public class FieldView {
 		f = fi;
 	}
 	
-	//Visszaadja az x koordinátát
-	// @return - x koordináta
+	//Visszaadja az x koordinï¿½tï¿½t
+	// @return - x koordinï¿½ta
 	public int getX() {
 		return x;
 	}
-	//Visszaadja az y koordinátát
-	// @return - y koordináta
+	//Visszaadja az y koordinï¿½tï¿½t
+	// @return - y koordinï¿½ta
 	public int getY() {
 		return y;
 	}
-	//Visszaadja az azonostíót
-	// @return - azonosító
+	//Visszaadja az azonostï¿½ï¿½t
+	// @return - azonosï¿½tï¿½
 	public int getID() {
 		return id;
 	}
-	//Visszaadja a modellbeli mezõt
-	// @return - a mezõ
+	//Visszaadja a modellbeli mezï¿½t
+	// @return - a mezï¿½
 	public Field getField() {
 		return f;
 	}

@@ -1,3 +1,7 @@
+package main.java;
+
+
+
 
 public abstract class Agent implements Steppable{
 	protected int aminoacidCost;
@@ -7,37 +11,37 @@ public abstract class Agent implements Steppable{
 	protected int ttl;
 	protected Virologist virologist;
 	
-	// Visszaadja az ágens aminosavköltségét
-    // @return - az aminosavköltség
+	// Visszaadja az ï¿½gens aminosavkï¿½ltsï¿½gï¿½t
+    // @return - az aminosavkï¿½ltsï¿½g
 	public int getAminoCost() {
 		return aminoacidCost;
 	}
 	
-	// Visszaadja az ágens nukleotidköltségét
-    // @return - a nukleotidköltség
+	// Visszaadja az ï¿½gens nukleotidkï¿½ltsï¿½gï¿½t
+    // @return - a nukleotidkï¿½ltsï¿½g
 	public int getNucleoCost() {
 		return nucleotideCost;
 	}
 	
-	// Visszaadja az ágens hatásidejét
-    // @return - a hatásidõ
+	// Visszaadja az ï¿½gens hatï¿½sidejï¿½t
+    // @return - a hatï¿½sidï¿½
 	public int getDuration() {
 		return duration;
 	}
 	
-	// Visszaadja az ágens hatásának hátralévõ idejét
-    // @return - a hátralévõ idõ
+	// Visszaadja az ï¿½gens hatï¿½sï¿½nak hï¿½tralï¿½vï¿½ idejï¿½t
+    // @return - a hï¿½tralï¿½vï¿½ idï¿½
 	public int getTimeLeft() {
 		return timeLeft;
 	}
 	
-	// Beállítja az ágens hatásának hátralévõ idejét
-    // @param n - a hátralévõ idõ
+	// Beï¿½llï¿½tja az ï¿½gens hatï¿½sï¿½nak hï¿½tralï¿½vï¿½ idejï¿½t
+    // @param n - a hï¿½tralï¿½vï¿½ idï¿½
 	public void setTimeLeft(int n) {
 		timeLeft = n;
 	}
 	
-	// Idõben lépteti az ágenst
+	// Idï¿½ben lï¿½pteti az ï¿½genst
 	public void step() {
 		if(ttl > 0)
 			ttl--;
@@ -46,25 +50,25 @@ public abstract class Agent implements Steppable{
 		}
 	}
 	
-	// Beállítja az ágenst birtokló virológust
-    // @param v - a virológus
+	// Beï¿½llï¿½tja az ï¿½genst birtoklï¿½ virolï¿½gust
+    // @param v - a virolï¿½gus
 	public void setVirologist(Virologist v) {
 		virologist = v;
 	}
 	
-	// Létrehoz egy új, ugyanolyan típusú ágenst
-	// @return - az új vírus
+	// Lï¿½trehoz egy ï¿½j, ugyanolyan tï¿½pusï¿½ ï¿½genst
+	// @return - az ï¿½j vï¿½rus
 	public abstract Agent create();
 	
-	//Visszaadja az ágens lejáratig tartó idõt
-	// @return - az ágens lejáratig tartó idõ
+	//Visszaadja az ï¿½gens lejï¿½ratig tartï¿½ idï¿½t
+	// @return - az ï¿½gens lejï¿½ratig tartï¿½ idï¿½
 	public int getTTL()
     {
         return ttl;
     }
 	
-	//Visszaadja a hozzá tartozó virológust
-	// @return -  a virológus
+	//Visszaadja a hozzï¿½ tartozï¿½ virolï¿½gust
+	// @return -  a virolï¿½gus
     public Virologist getVirologist() {
         return virologist;
     }

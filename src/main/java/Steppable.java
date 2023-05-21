@@ -1,6 +1,6 @@
-
+package main.java;
 public interface Steppable {
 
-	///Egy adott idõbeli lépést hajt végre
+	///Egy adott idï¿½beli lï¿½pï¿½st hajt vï¿½gre
 	public void step();
 }

@@ -1,26 +1,26 @@
-
+package main.java;
 public class Shelter extends Field{
 	private Item items;
 	
-	//Óvóhely konstruktor
+	//ï¿½vï¿½hely konstruktor
 	public Shelter() {
 		items=null;
 	}
-	// Felszerelést hozzáadja
-	// @param i - az a felszerelés ami az óvóhelyen van
+	// Felszerelï¿½st hozzï¿½adja
+	// @param i - az a felszerelï¿½s ami az ï¿½vï¿½helyen van
 	public void addItem(Item i) {	
 		items=i;
 	}
-	// Felszerelés felvétel
-	// @param v -  A virológus aki felveszi a felszerelést
+	// Felszerelï¿½s felvï¿½tel
+	// @param v -  A virolï¿½gus aki felveszi a felszerelï¿½st
 	public void pickedUp(Virologist v) {
 		if(v.addItem(items)) {
 			items=null;
 		}
 				
 	}
-	//Visszaadja a rajta lévõ tárgyat
-	// @return - a rajta lévõ tárgy
+	//Visszaadja a rajta lï¿½vï¿½ tï¿½rgyat
+	// @return - a rajta lï¿½vï¿½ tï¿½rgy
 	public Item getItem(){
 		return items;
 	}

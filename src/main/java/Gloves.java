@@ -1,7 +1,7 @@
-
+package main.java;
 public class Gloves extends Item{
 
-	// A kesztyû ellenállóképessége
+	// A kesztyï¿½ ellenï¿½llï¿½kï¿½pessï¿½ge
 private int durability;
 	
 	/**Ctor
@@ -42,8 +42,8 @@ private int durability;
         return true;
     }
 	
-	//Visszaadja a kesztyû ellenállóképességét
-	// @return - a kesztyû ellenállóképessége
+	//Visszaadja a kesztyï¿½ ellenï¿½llï¿½kï¿½pessï¿½gï¿½t
+	// @return - a kesztyï¿½ ellenï¿½llï¿½kï¿½pessï¿½ge
 	public int getDurability() {
 		return durability;
 	}

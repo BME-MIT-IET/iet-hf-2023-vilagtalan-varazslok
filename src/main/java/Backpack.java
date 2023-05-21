@@ -1,4 +1,4 @@
-
+package main.java;
 public class Backpack extends Item{
 	
 	/**Ctor

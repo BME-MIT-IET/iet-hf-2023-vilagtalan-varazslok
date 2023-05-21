@@ -1,38 +1,38 @@
-
+package main.java;
 import java.util.ArrayList;
 
 public class Virologist {
 	
 	
-	/** A virológusnál levõ nukleotid mennyisége.    
+	/** A virolï¿½gusnï¿½l levï¿½ nukleotid mennyisï¿½ge.    
      * */
 	private int nucleotide;
 	
-	/** A virológusnál levõ aminosav mennyisége	     
+	/** A virolï¿½gusnï¿½l levï¿½ aminosav mennyisï¿½ge	     
      * */
 	
 	private int aminoacid;
-	/** A virológusnál levõ maximális anyagmennyiség, alapból 100
-		anyagonként.    
+	/** A virolï¿½gusnï¿½l levï¿½ maximï¿½lis anyagmennyisï¿½g, alapbï¿½l 100
+		anyagonkï¿½nt.    
      * */
 	private int maxMaterial=100;
-	/**A virológus által készíthetõ ágensek listája.
+	/**A virolï¿½gus ï¿½ltal kï¿½szï¿½thetï¿½ ï¿½gensek listï¿½ja.
      * */
 	private ArrayList<Agent> agentsKnown=new ArrayList<Agent>();
-	/** A virológus által elkészített, éppen felhasználható
-		ágensek listája.     
+	/** A virolï¿½gus ï¿½ltal elkï¿½szï¿½tett, ï¿½ppen felhasznï¿½lhatï¿½
+		ï¿½gensek listï¿½ja.     
      * */
 	private ArrayList<Agent> agentsCreated;
-	/** A virológusra jelenleg ható (felkent) vírusok listája	     
+	/** A virolï¿½gusra jelenleg hatï¿½ (felkent) vï¿½rusok listï¿½ja	     
      * */
 	private ArrayList<Virus> viruses=new ArrayList<Virus>();
-	/** A virológusra jelenleg ható (felkent) vakcinák listája      
+	/** A virolï¿½gusra jelenleg hatï¿½ (felkent) vakcinï¿½k listï¿½ja      
      * */
 	private ArrayList<Vaccine> vaccines=new ArrayList<Vaccine>();
-	/** A virológus által birtokolt tárgyak (védõfelszerelés) listája	     
+	/** A virolï¿½gus ï¿½ltal birtokolt tï¿½rgyak (vï¿½dï¿½felszerelï¿½s) listï¿½ja	     
      * */
 	private ArrayList<Item> items=new ArrayList<Item>();
-	/** Az a mezõ, amin a virológus áll.	     
+	/** Az a mezï¿½, amin a virolï¿½gus ï¿½ll.	     
      * */
 	private Field field;
 	
@@ -44,9 +44,9 @@ public class Virologist {
 		nucleotide = 50;
 	}
 	
-	/** Megvizsgálja, hogy cselekvõképes-e. Ha igen, a virológus a
-		paraméterben megadott mezõre lép.
-     * @param f - A mezõ, ahova lép
+	/** Megvizsgï¿½lja, hogy cselekvï¿½kï¿½pes-e. Ha igen, a virolï¿½gus a
+		paramï¿½terben megadott mezï¿½re lï¿½p.
+     * @param f - A mezï¿½, ahova lï¿½p
      * */
 	public void move(Field f) {
 		for(Virus vir: viruses) {
@@ -64,14 +64,14 @@ public class Virologist {
 		}
 		f.movedOn(this);
 	}
-	/**Visszaadja a mezõt, amelyen a virológus áll.
+	/**Visszaadja a mezï¿½t, amelyen a virolï¿½gus ï¿½ll.
      * 
-     * @return - a mezõ, ahol a virológus áll
+     * @return - a mezï¿½, ahol a virolï¿½gus ï¿½ll
      * */
 	public Field getField() {
 		return field;		
 	}
-	/** A virológus felveszi a mezõn található dolgokat.
+	/** A virolï¿½gus felveszi a mezï¿½n talï¿½lhatï¿½ dolgokat.
      * */
 	public void pickUp() {
 		for(Virus vir: viruses) {
@@ -81,10 +81,10 @@ public class Virologist {
 		}
 		field.pickedUp(this);
 	}
-	/**Ellenõrzi, hogy a virológus felveheti-e az adott tárgyat. Ha
+	/**Ellenï¿½rzi, hogy a virolï¿½gus felveheti-e az adott tï¿½rgyat. Ha
 		felveheti akkor fel is veszi.  
-     * @param i - a felvevendõ tárgy
-     * @return - a felvétel sikeressége
+     * @param i - a felvevendï¿½ tï¿½rgy
+     * @return - a felvï¿½tel sikeressï¿½ge
      * */
 	public boolean addItem(Item i) {
 		if(i==null) return false;
@@ -100,9 +100,9 @@ public class Virologist {
 		i.equip(this);
 		return true;
 	}
-	/** Amennyiben a virológus nem ismeri még az
-		adott ágenseket, akkor megtanulja.
-     * @param a - A megtanulandó ágensek listája
+	/** Amennyiben a virolï¿½gus nem ismeri mï¿½g az
+		adott ï¿½genseket, akkor megtanulja.
+     * @param a - A megtanulandï¿½ ï¿½gensek listï¿½ja
      * 
      * */
 	public void addKnownAgents (ArrayList<Agent> a) {
@@ -115,44 +115,44 @@ public class Virologist {
 		agentsKnown.addAll(a);
 		Game.instance().checkEndGame(agentsKnown.size());
 	}
-	/** : Beállítja a virológusnál található aminosavmennyiséget a
-		paraméterben kapott számra
+	/** : Beï¿½llï¿½tja a virolï¿½gusnï¿½l talï¿½lhatï¿½ aminosavmennyisï¿½get a
+		paramï¿½terben kapott szï¿½mra
 
-     * @param n - A beállítandó mennyiség
+     * @param n - A beï¿½llï¿½tandï¿½ mennyisï¿½g
      * 
      * */
 	public void setAminoacid(int n) {
 		aminoacid=n;
 	}
-	/** : Beállítja a virológusnál található nukleotidmennyiséget a
-		paraméterben kapott számra.
+	/** : Beï¿½llï¿½tja a virolï¿½gusnï¿½l talï¿½lhatï¿½ nukleotidmennyisï¿½get a
+		paramï¿½terben kapott szï¿½mra.
 
-	     * @param n - A beállítandó mennyiség
+	     * @param n - A beï¿½llï¿½tandï¿½ mennyisï¿½g
 	     * 
 	     * */
 	public void setNucleotide(int n) {
 		nucleotide=n;
 	}
-	/** : Beállítja azt a mennyiségetet, ami a virológusnál lehet
-		pillanatnyilag egy idõben egy anyagfajtából.
+	/** : Beï¿½llï¿½tja azt a mennyisï¿½getet, ami a virolï¿½gusnï¿½l lehet
+		pillanatnyilag egy idï¿½ben egy anyagfajtï¿½bï¿½l.
 
-	     * @param n - A beállítandó mennyiség
+	     * @param n - A beï¿½llï¿½tandï¿½ mennyisï¿½g
 	     * 
 	     * */
 	public void setMaxMaterial(int n) {
 		maxMaterial=n;
 	}
-	/**Visszaadja azt a mennyiséget, ami a virológusnál lehet egy
-		idõben egy anyagfajtából alapértelmezetten.
+	/**Visszaadja azt a mennyisï¿½get, ami a virolï¿½gusnï¿½l lehet egy
+		idï¿½ben egy anyagfajtï¿½bï¿½l alapï¿½rtelmezetten.
      * @return - megakadalyozza-e a tamadast
      * */
 	public int getMaxMaterial() {
 		return maxMaterial;
 	}
-	/**Megvizsgálja, hogy cselekvõképes-e. Ha igen, lop a
-		paraméterben kapott virológustól; meghívja a paraméterben kapott virológus
-		stolenFrom függvényét
-     * @param v - A virológus, akitõl lopni akar
+	/**Megvizsgï¿½lja, hogy cselekvï¿½kï¿½pes-e. Ha igen, lop a
+		paramï¿½terben kapott virolï¿½gustï¿½l; meghï¿½vja a paramï¿½terben kapott virolï¿½gus
+		stolenFrom fï¿½ggvï¿½nyï¿½t
+     * @param v - A virolï¿½gus, akitï¿½l lopni akar
      * 
      * */
 	public void steal(Virologist v) {
@@ -163,20 +163,20 @@ public class Virologist {
 		}
 		v.stolenFrom(this, items, maxMaterial-aminoacid, maxMaterial-nucleotide);
 	}
-	/**A virológus
-		ezzel kezeli le, ha meglopták, a lopótól kapja, paraméterben a lopó virológussal, a
-		tárgylistájával, és azzal, hogy mennyi anyag kell neki az egyes anyagfajtákból, hogy
-		elérje a maximumot. A meglopott virológus végigkérdezi a saját magán aktív
-		vírusokon, hogy van-e olyan, amely lophatóvá tenné (jelenleg csak a bénultság, ez
-		késõbbiekben bõvülhet): ha nincs akkor egyszerûen visszatér, ha van, akkor pedig
-		meghívja a lopón a receive függvényt, paraméterben a neki átadható tárgyak listájával,
-		illetve a lehetõ legtöbb nukleotiddal és aminosavval, amennyi még elfér nála (és
-		rendelkezik vele). Ezt a mennyiséget magától levonja a meglopott virológus.
+	/**A virolï¿½gus
+		ezzel kezeli le, ha megloptï¿½k, a lopï¿½tï¿½l kapja, paramï¿½terben a lopï¿½ virolï¿½gussal, a
+		tï¿½rgylistï¿½jï¿½val, ï¿½s azzal, hogy mennyi anyag kell neki az egyes anyagfajtï¿½kbï¿½l, hogy
+		elï¿½rje a maximumot. A meglopott virolï¿½gus vï¿½gigkï¿½rdezi a sajï¿½t magï¿½n aktï¿½v
+		vï¿½rusokon, hogy van-e olyan, amely lophatï¿½vï¿½ tennï¿½ (jelenleg csak a bï¿½nultsï¿½g, ez
+		kï¿½sï¿½bbiekben bï¿½vï¿½lhet): ha nincs akkor egyszerï¿½en visszatï¿½r, ha van, akkor pedig
+		meghï¿½vja a lopï¿½n a receive fï¿½ggvï¿½nyt, paramï¿½terben a neki ï¿½tadhatï¿½ tï¿½rgyak listï¿½jï¿½val,
+		illetve a lehetï¿½ legtï¿½bb nukleotiddal ï¿½s aminosavval, amennyi mï¿½g elfï¿½r nï¿½la (ï¿½s
+		rendelkezik vele). Ezt a mennyisï¿½get magï¿½tï¿½l levonja a meglopott virolï¿½gus.
 
      * @param v - Virologus, aki lop
-     * @param items - a lopó tárgyainak a listája
-     * @param amino - a lopónak szükséges aminosav mennyisége
-     * @param nucleo - a lopónak szükséges nukleotid mennyisége
+     * @param items - a lopï¿½ tï¿½rgyainak a listï¿½ja
+     * @param amino - a lopï¿½nak szï¿½ksï¿½ges aminosav mennyisï¿½ge
+     * @param nucleo - a lopï¿½nak szï¿½ksï¿½ges nukleotid mennyisï¿½ge
      * */
 	public void stolenFrom(Virologist v, ArrayList<Item> items, int amino, int nucleo) {		
 		boolean temp=false;
@@ -216,12 +216,12 @@ public class Virologist {
 		}
 		
 	}
-	/**A lopó virológuson hívja meg a
-		meglopott virológus, paraméterben a lopó által kapott (ellopott) tárgyak listájával,
-		aminosav- és nukleotidmennyiséggel, ezeket a lopó virológus hozzáadja magához.
-     * @param items - az ellopott tárgyak listája
-     * @param amino - az ellopott aminosav mennyisége
-     * @param nucleo - az ellopott nukleotid mennyisége
+	/**A lopï¿½ virolï¿½guson hï¿½vja meg a
+		meglopott virolï¿½gus, paramï¿½terben a lopï¿½ ï¿½ltal kapott (ellopott) tï¿½rgyak listï¿½jï¿½val,
+		aminosav- ï¿½s nukleotidmennyisï¿½ggel, ezeket a lopï¿½ virolï¿½gus hozzï¿½adja magï¿½hoz.
+     * @param items - az ellopott tï¿½rgyak listï¿½ja
+     * @param amino - az ellopott aminosav mennyisï¿½ge
+     * @param nucleo - az ellopott nukleotid mennyisï¿½ge
      * */
 	public void recieve(ArrayList<Item> items, int amino, int nucleo) {
 		aminoacid+=amino;
@@ -232,12 +232,12 @@ public class Virologist {
 		}
 		
 	}
-	/**Megvizsgálja, hogy cselekvõképes-e. Ha igen, lekéri a
-		paraméterben kapott ágens anyagköltségét, és ha van elég anyaga, meghívja az ágens
-		create() függvényét, a visszatérési értékben kapott ágenset hozzáadja az elkészített
-		ágensek listájához, ezután pedig hozzáadja a Timer steppables listájához. Az ágensen
-		beállítja a hozzá tartozó virológust.
-     * @param ag - Az elkészítendõ ágens
+	/**Megvizsgï¿½lja, hogy cselekvï¿½kï¿½pes-e. Ha igen, lekï¿½ri a
+		paramï¿½terben kapott ï¿½gens anyagkï¿½ltsï¿½gï¿½t, ï¿½s ha van elï¿½g anyaga, meghï¿½vja az ï¿½gens
+		create() fï¿½ggvï¿½nyï¿½t, a visszatï¿½rï¿½si ï¿½rtï¿½kben kapott ï¿½genset hozzï¿½adja az elkï¿½szï¿½tett
+		ï¿½gensek listï¿½jï¿½hoz, ezutï¿½n pedig hozzï¿½adja a Timer steppables listï¿½jï¿½hoz. Az ï¿½gensen
+		beï¿½llï¿½tja a hozzï¿½ tartozï¿½ virolï¿½gust.
+     * @param ag - Az elkï¿½szï¿½tendï¿½ ï¿½gens
      * 
      * */
 	public void createAgent(Agent ag) {
@@ -255,11 +255,11 @@ public class Virologist {
 			Timer.instance().addSteppable(newagent);
 		}
 	}
-	/**Megvizsgálja, hogy cselekvõképes-e. Ha igen, a
-		virológus frissíti a vírus idejét, és meghívja a paraméterben kapott virológus
-		gotInfected függvényét paraméterben a vírussal
-     * @param t - Virologus, akit megfertõzni szeretne
-     * @param v - Vírus, amivel fertõz
+	/**Megvizsgï¿½lja, hogy cselekvï¿½kï¿½pes-e. Ha igen, a
+		virolï¿½gus frissï¿½ti a vï¿½rus idejï¿½t, ï¿½s meghï¿½vja a paramï¿½terben kapott virolï¿½gus
+		gotInfected fï¿½ggvï¿½nyï¿½t paramï¿½terben a vï¿½russal
+     * @param t - Virologus, akit megfertï¿½zni szeretne
+     * @param v - Vï¿½rus, amivel fertï¿½z
      * */
 	public void useVirus (Virologist t, Virus v) {
 		for(Virus vir: viruses) {
@@ -272,15 +272,15 @@ public class Virologist {
 		t.gotInfected(this, v);
 		agentsCreated.remove(v);
 	}
-	/**Lekéri az összes védõfelszerelés attackEffect
-		függvényét, és ha kap igaz értéket, visszatér. Ha nem, akkor lekéri az összes
-		vakcinájától a counter függvényt, és ha kap igazat egyiktõl is, akkor eltávolítja a
-		paraméterben kapott vírust a Timer steppables listájából a removeSteppable
-		függvénnyel, ha viszont mind hamissal tér vissza, akkor hozzáadja a paraméterben
-		kapott vírust a rá felkent vírusok listájához. Az ágensen beállítja a hozzá tartozó
-		virológust (magát), és kifejteti az azonnali hatását.
-     * @param t - Virologus, aki fertõz
-     * @param v - Vírus, amivel fertõzték
+	/**Lekï¿½ri az ï¿½sszes vï¿½dï¿½felszerelï¿½s attackEffect
+		fï¿½ggvï¿½nyï¿½t, ï¿½s ha kap igaz ï¿½rtï¿½ket, visszatï¿½r. Ha nem, akkor lekï¿½ri az ï¿½sszes
+		vakcinï¿½jï¿½tï¿½l a counter fï¿½ggvï¿½nyt, ï¿½s ha kap igazat egyiktï¿½l is, akkor eltï¿½volï¿½tja a
+		paramï¿½terben kapott vï¿½rust a Timer steppables listï¿½jï¿½bï¿½l a removeSteppable
+		fï¿½ggvï¿½nnyel, ha viszont mind hamissal tï¿½r vissza, akkor hozzï¿½adja a paramï¿½terben
+		kapott vï¿½rust a rï¿½ felkent vï¿½rusok listï¿½jï¿½hoz. Az ï¿½gensen beï¿½llï¿½tja a hozzï¿½ tartozï¿½
+		virolï¿½gust (magï¿½t), ï¿½s kifejteti az azonnali hatï¿½sï¿½t.
+     * @param t - Virologus, aki fertï¿½z
+     * @param v - Vï¿½rus, amivel fertï¿½ztï¿½k
      * */
 	public boolean gotInfected(Virologist t, Virus v) {
 		for(Item it: items) {
@@ -300,11 +300,11 @@ public class Virologist {
 		return true;
 	}
 	
-	/**Megvizsgálja, hogy cselekvõképes-e. Ha igen,
-		a virológus frissíti a vakcina idejét, és meghívja a paraméterben kapott virológus
-		gotVaccinated függvényét paraméterben a vakcinával.
+	/**Megvizsgï¿½lja, hogy cselekvï¿½kï¿½pes-e. Ha igen,
+		a virolï¿½gus frissï¿½ti a vakcina idejï¿½t, ï¿½s meghï¿½vja a paramï¿½terben kapott virolï¿½gus
+		gotVaccinated fï¿½ggvï¿½nyï¿½t paramï¿½terben a vakcinï¿½val.
 
-     * @param t - Virologus, akinek beadjuk a vakcinát
+     * @param t - Virologus, akinek beadjuk a vakcinï¿½t
      * @param v - A vakcina, amit beadnak
      * */
 	public void useVaccine (Virologist t, Vaccine v) {
@@ -325,8 +325,8 @@ public class Virologist {
 		agentsCreated.remove(v);
 	}
 	
-	/**Hozzáadja a paraméterben kapott vakcinát az aktív
-		vakcinák listájához. Az ágensen beállítja a hozzá tartozó virológust (magát)
+	/**Hozzï¿½adja a paramï¿½terben kapott vakcinï¿½t az aktï¿½v
+		vakcinï¿½k listï¿½jï¿½hoz. Az ï¿½gensen beï¿½llï¿½tja a hozzï¿½ tartozï¿½ virolï¿½gust (magï¿½t)
      * @param v - A beadott vakcina
      * 
      * */
@@ -335,35 +335,35 @@ public class Virologist {
 		v.setVirologist(this);
 	}
 	
-	/**Beállítja a virológus által ismert (elkészíthetõ)
-		ágensek listáját a paraméterben kapottra.
-     * @param a - a beállítandó ágenslista
+	/**Beï¿½llï¿½tja a virolï¿½gus ï¿½ltal ismert (elkï¿½szï¿½thetï¿½)
+		ï¿½gensek listï¿½jï¿½t a paramï¿½terben kapottra.
+     * @param a - a beï¿½llï¿½tandï¿½ ï¿½genslista
      * 
      * */
 	public void setAgentsKnown(ArrayList<Agent> a) {
 		agentsKnown = a;
 	}
 	
-	/**Kiveszi a vírusok listájából a paraméterként kapott vírust.
-     * @param v - A virus, amit elveszít
+	/**Kiveszi a vï¿½rusok listï¿½jï¿½bï¿½l a paramï¿½terkï¿½nt kapott vï¿½rust.
+     * @param v - A virus, amit elveszï¿½t
      * 
      * */
 	public void loseVirus(Virus v) {
 		if(viruses.remove(v)) {Timer.instance().removeSteppable(v);}
 	}
 	
-	/**Kiveszi a vakcinák listájából a paraméterként kapott
-		vakcinát.
-     * @param v - Vakcina, amit elveszít
+	/**Kiveszi a vakcinï¿½k listï¿½jï¿½bï¿½l a paramï¿½terkï¿½nt kapott
+		vakcinï¿½t.
+     * @param v - Vakcina, amit elveszï¿½t
      * 
      * */
 	public void loseVaccine(Vaccine v) {
 		if(vaccines.remove(v)) {Timer.instance().removeSteppable(v);}
 	}
 	
-	/** Kiveszi a felhasználható ágensek listájából a
-		paraméterként kapott ágens
-     * @param a - Az ágens, amit elveszít
+	/** Kiveszi a felhasznï¿½lhatï¿½ ï¿½gensek listï¿½jï¿½bï¿½l a
+		paramï¿½terkï¿½nt kapott ï¿½gens
+     * @param a - Az ï¿½gens, amit elveszï¿½t
      * 
      * */
 	public void loseCreatedAgent(Agent a) {
@@ -371,14 +371,14 @@ public class Virologist {
 			Timer.instance().removeSteppable(a);
 		}
 	}
-	/**Visszaadja a virológuson aktív vírusokat
+	/**Visszaadja a virolï¿½guson aktï¿½v vï¿½rusokat
      * 
-     * @return - a virológuson aktív vírusok
+     * @return - a virolï¿½guson aktï¿½v vï¿½rusok
      * */
 	public ArrayList<Virus> getActiveViruses(){
 		return viruses;
 	}
-	/**Megtámadják a virológust baltával. Ha sikeres, akkor meghal, cleareli a listáit, eltávolítja magát a játékból.
+	/**Megtï¿½madjï¿½k a virolï¿½gust baltï¿½val. Ha sikeres, akkor meghal, cleareli a listï¿½it, eltï¿½volï¿½tja magï¿½t a jï¿½tï¿½kbï¿½l.
      * 
      * */
 	public boolean axed() {
@@ -410,58 +410,58 @@ public class Virologist {
 		}
 		return false;
 	}
-	/**Eldobja az adott tárgyat
+	/**Eldobja az adott tï¿½rgyat
      * 
-     * @param i  - Az eldobandó tárgy
+     * @param i  - Az eldobandï¿½ tï¿½rgy
      * */
 	public void loseItem(Item i) {
 		items.remove(i);
 	}
-	/**Visszaadja a birtokolt nukleotid mennyiségét
+	/**Visszaadja a birtokolt nukleotid mennyisï¿½gï¿½t
      * 
-     * @return - a birtokolt nukleotid mennyisége
+     * @return - a birtokolt nukleotid mennyisï¿½ge
      * */
 	public int getNucleotide() {
 		return nucleotide;
 	}
-	/**Visszaadja a birtokolt aminosav mennyiségét
+	/**Visszaadja a birtokolt aminosav mennyisï¿½gï¿½t
      * 
-     * @return - a birtokolt aminosav mennyisége
+     * @return - a birtokolt aminosav mennyisï¿½ge
      * */
 	public int getAminoacid() {
 		return aminoacid;
 	}
-	/**Visszaadja a virológus által ismert ágenseket
+	/**Visszaadja a virolï¿½gus ï¿½ltal ismert ï¿½genseket
      * 
-     * @return - a virológus által ismert ágensek
+     * @return - a virolï¿½gus ï¿½ltal ismert ï¿½gensek
      * */
 	public ArrayList<Agent> getAgentsKnown() {
 		return agentsKnown;
 	}
-	/**Visszaadja a virológus által legyártott ágenseket
+	/**Visszaadja a virolï¿½gus ï¿½ltal legyï¿½rtott ï¿½genseket
      * 
-     * @return - a virológus által legyártott ágensek
+     * @return - a virolï¿½gus ï¿½ltal legyï¿½rtott ï¿½gensek
      * */
 	public ArrayList<Agent> getAgentsCreated(){
 		return agentsCreated;
 	}
-	/**Visszaadja a virológuson aktív vakcinákat
+	/**Visszaadja a virolï¿½guson aktï¿½v vakcinï¿½kat
      * 
-     * @return - a virológuson aktív vakcinák
+     * @return - a virolï¿½guson aktï¿½v vakcinï¿½k
      * */
 	public ArrayList<Vaccine> getActiveVaccines(){
 		return vaccines;
 	}
-	/**Visszaadja a virológus tárygait
+	/**Visszaadja a virolï¿½gus tï¿½rygait
      * 
-     * @return - a virológus tárgyai
+     * @return - a virolï¿½gus tï¿½rgyai
      * */
 	public ArrayList<Item> getItems(){
 		return items;
 	}
-	/**Beállítja a virológus mezõjét
+	/**Beï¿½llï¿½tja a virolï¿½gus mezï¿½jï¿½t
      * 
-     * @param newf  - Az új, beállítandó mezõ
+     * @param newf  - Az ï¿½j, beï¿½llï¿½tandï¿½ mezï¿½
      * */
 	public void setField(Field newf) {
 		field=newf;

@@ -1,12 +1,12 @@
-
+package main.java;
 
 public class NucleotideStorage extends Storage{
 	//Nukleotid konstruktor
 	public NucleotideStorage() {
 		active=true;
 	}
-	// Nukleotid felvétel
-	// @param v - Az a virológus aki felveszi a nukleotidot
+	// Nukleotid felvï¿½tel
+	// @param v - Az a virolï¿½gus aki felveszi a nukleotidot
 	public void pickedUp(Virologist v) {
 		if(active) {
 			int maxmaterial=v.getMaxMaterial();

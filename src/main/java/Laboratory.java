@@ -1,23 +1,24 @@
+package main.java;
 import java.util.ArrayList;
 
 public class Laboratory extends Field {
 	private ArrayList<Agent>agents=new ArrayList<Agent>();
 	
-	//Laboratórium konstruktor
+	//Laboratï¿½rium konstruktor
 	public Laboratory() {
 		
 	}
-	// Ágenseket hozzáadja a mezõhöz
-	// @param a1 - egyik ágens
-	// @param a2 - másik ágens
+	// ï¿½genseket hozzï¿½adja a mezï¿½hï¿½z
+	// @param a1 - egyik ï¿½gens
+	// @param a2 - mï¿½sik ï¿½gens
 	
 	public void addAgents(ArrayList<Agent> ags) {
 		for(Agent a : ags) {
 			agents.add(a);	
 		}
 	}
-	// Ágens tanulás
-	// @param v -  A virológus aki megtanulja az ágenseket
+	// ï¿½gens tanulï¿½s
+	// @param v -  A virolï¿½gus aki megtanulja az ï¿½genseket
 	public void pickedUp(Virologist v) {	
 		ArrayList<Agent> ags =new ArrayList<Agent>();
 		for(Agent a : agents) {
@@ -28,8 +29,8 @@ public class Laboratory extends Field {
 		v.addKnownAgents(ags);
 	}
 	
-	//Akció, amikor rálépnek a laborítóriumra. Medvével fertõzi a rálépõket, ha van nála.
-	// @param v - a virológus, aki a mezõre lépett
+	//Akciï¿½, amikor rï¿½lï¿½pnek a laborï¿½tï¿½riumra. Medvï¿½vel fertï¿½zi a rï¿½lï¿½pï¿½ket, ha van nï¿½la.
+	// @param v - a virolï¿½gus, aki a mezï¿½re lï¿½pett
 	public void movedOn(Virologist v) {
 		
 		for(int i=0;i<agents.size();i++) {
@@ -44,8 +45,8 @@ public class Laboratory extends Field {
 		}
 	}
 	
-	//Visszaadja a mezõn lévõ virológusokat
-	// @return - a mezõn álló virológusok listája
+	//Visszaadja a mezï¿½n lï¿½vï¿½ virolï¿½gusokat
+	// @return - a mezï¿½n ï¿½llï¿½ virolï¿½gusok listï¿½ja
 	public ArrayList<Agent> getAgents(){
 		return agents;
 	}

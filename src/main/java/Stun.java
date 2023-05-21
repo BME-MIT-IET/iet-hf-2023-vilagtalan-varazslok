@@ -1,7 +1,7 @@
-
+package main.java;
 public class Stun extends Virus{
 
-	// Stun osztály konstruktora
+	// Stun osztï¿½ly konstruktora
 	public Stun() {
 		aminoacidCost = 50;
 		nucleotideCost = 50;
@@ -11,20 +11,20 @@ public class Stun extends Virus{
 		virologist = null;
 	}
 	
-	// Létrehoz egy új, ugyanolyan típusú vírust
-	// @return - az új vírus
+	// Lï¿½trehoz egy ï¿½j, ugyanolyan tï¿½pusï¿½ vï¿½rust
+	// @return - az ï¿½j vï¿½rus
 	public Agent create() {
 		return new Stun();
 	}
 
-	// Visszaadja, hogy a vírus hatása alatt álló virológustól lehet-e lopni
-    // @return - az eredmény
+	// Visszaadja, hogy a vï¿½rus hatï¿½sa alatt ï¿½llï¿½ virolï¿½gustï¿½l lehet-e lopni
+    // @return - az eredmï¿½ny
 	public boolean stealable() {
 		return true;
 	}
 	
-	// Visszaadja, hogy a vírus hatása alatt álló virológus cselekvõképes-e
-    // @return - az eredmény
+	// Visszaadja, hogy a vï¿½rus hatï¿½sa alatt ï¿½llï¿½ virolï¿½gus cselekvï¿½kï¿½pes-e
+    // @return - az eredmï¿½ny
 	public boolean canAct() {
 		return false;
 	}

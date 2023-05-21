@@ -1,22 +1,22 @@
-
+package main.java;
 public abstract class Virus extends Agent {
 
-	// A vírus hatást fejt ki
+	// A vï¿½rus hatï¿½st fejt ki
 	public void effect() {}
 	
-	// Visszaadja, hogy a vírus hatása alatt álló virológustól lehet-e lopni
-    // @return - az eredmény
+	// Visszaadja, hogy a vï¿½rus hatï¿½sa alatt ï¿½llï¿½ virolï¿½gustï¿½l lehet-e lopni
+    // @return - az eredmï¿½ny
 	public boolean stealable() {
 		return false;
 	}
 	
-	// Visszaadja, hogy a vírus hatása alatt álló virológus cselekvõképes-e
-    // @return - az eredmény
+	// Visszaadja, hogy a vï¿½rus hatï¿½sa alatt ï¿½llï¿½ virolï¿½gus cselekvï¿½kï¿½pes-e
+    // @return - az eredmï¿½ny
 	public boolean canAct() {
 		return true;
 	}
 	
-	// Idõben lépteti a vírust
+	// Idï¿½ben lï¿½pteti a vï¿½rust
 	public void step() {
 		super.step();
 		if(timeLeft > 0)
@@ -26,8 +26,8 @@ public abstract class Virus extends Agent {
 		}
 	}
 
-	// Létrehoz egy új, ugyanolyan típusú vírust
-	// @return - az új vírus
+	// Lï¿½trehoz egy ï¿½j, ugyanolyan tï¿½pusï¿½ vï¿½rust
+	// @return - az ï¿½j vï¿½rus
 	public abstract Agent create();
 
 }
