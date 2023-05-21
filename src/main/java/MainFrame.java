@@ -18,6 +18,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MainFrame extends JFrame{
 	/**
@@ -294,7 +295,7 @@ public class MainFrame extends JFrame{
 		}
 		comboBoxRefresher(useableViruses, temp);
 		
-		temp = new ArrayList<Object>();
+		temp = new ArrayList<>();
 		for(int i = 0; i < acs.size(); i++) {
 			if(acs.get(i) instanceof AntiChorea) {
 				temp.add("AntiChorea");
@@ -308,7 +309,7 @@ public class MainFrame extends JFrame{
 		}
 		comboBoxRefresher(useableVaccines, temp);
 		
-		temp = new ArrayList<Object>();
+		temp = new ArrayList<>();
 		ArrayList<Item> is = v.getItems();
 		for(int i = 0; i < is.size(); i++) {
 			if(is.get(i) instanceof Axe) {
@@ -499,7 +500,8 @@ public class MainFrame extends JFrame{
 				vv = vvs.get(i);
 			}
 		}
-        JOptionPane.showMessageDialog(null, vv.getName()+" won the game! Congratulations!");
+		if(vv!=null)
+        	JOptionPane.showMessageDialog(null, vv.getName()+" won the game! Congratulations!");
 	}
 	
 	//Visszaadja a p�ly�t
@@ -561,7 +563,7 @@ public class MainFrame extends JFrame{
 			String target = (String)stealTargets.getSelectedItem();
 			ArrayList<VirologistView> vvs = playArea.getVirologistViews();
 			for(int i = 0; i < vvs.size(); i++) {
-				if(target == vvs.get(i).getName()) {
+				if(Objects.equals(target, vvs.get(i).getName())) {
 					controller.steal(vvs.get(i).getVirologist());
 					return;
 				}
@@ -629,7 +631,7 @@ public class MainFrame extends JFrame{
 			Virologist targ = null;
 			ArrayList<VirologistView> vvs = playArea.getVirologistViews();
 			for(int i = 0; i < vvs.size(); i++) {
-				if(target == vvs.get(i).getName()) {
+				if(Objects.equals(target, vvs.get(i).getName())) {
 					targ = vvs.get(i).getVirologist();
 					break;
 				}
@@ -672,7 +674,7 @@ public class MainFrame extends JFrame{
 			Virologist targ = null;
 			ArrayList<VirologistView> vvs = playArea.getVirologistViews();
 			for(int i = 0; i < vvs.size(); i++) {
-				if(target == vvs.get(i).getName()) {
+				if(Objects.equals(target, vvs.get(i).getName())) {
 					targ = vvs.get(i).getVirologist();
 					break;
 				}
@@ -738,6 +740,7 @@ public class MainFrame extends JFrame{
 						controller.dropItem(is.get(i));
 						return;
 					}
+					break;
 				default:
 					break;
 				}
