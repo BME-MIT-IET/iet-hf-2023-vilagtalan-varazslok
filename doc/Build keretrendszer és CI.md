@@ -1,0 +1,1 @@
+Hozzáadtam a projekthez a Maven keretrendszert, és a pom fájlt.
