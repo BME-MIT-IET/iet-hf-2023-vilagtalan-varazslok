@@ -1,9 +1,9 @@
 package main.java;
+import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Game {
-	private static Random rand=new Random();
+	private static SecureRandom rand=new SecureRandom();
 	
 	//A j�t�kban tal�lhat� t�rgyak list�ja
 	private ArrayList<Item> items = new ArrayList<Item>();

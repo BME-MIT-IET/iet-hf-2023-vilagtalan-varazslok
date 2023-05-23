@@ -1,8 +1,9 @@
 package main.java;
-import java.util.Random;
+import java.security.SecureRandom;
+
 
 public class Cape extends Item{
-	private static Random rand=new Random();
+	private static SecureRandom rand=new SecureRandom();
 	
 	/**Ctor
 	 * */

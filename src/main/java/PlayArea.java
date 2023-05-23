@@ -116,7 +116,7 @@ public class PlayArea extends JPanel{
 			mapImage = ImageIO.read(new File(file));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 	}
 	
