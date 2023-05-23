@@ -1,11 +1,11 @@
 package main.java;
+import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Random;
 
 
 
 public class Chorea extends Virus {
-	private static Random rand=new Random();
+	private static SecureRandom rand=new SecureRandom();
 
 	// Chorea oszt�ly konstruktora
 	public Chorea() {

@@ -1,10 +1,10 @@
 
 package main.java;
+import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Bear extends Virus {
-	private static Random rand=new Random();
+	private static SecureRandom rand=new SecureRandom();
 
 	// Bear oszt�ly konstruktora
 	public Bear() {
