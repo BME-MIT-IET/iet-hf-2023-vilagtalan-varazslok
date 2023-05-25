@@ -11,6 +11,7 @@ public class Timer {
 		ArrayList<Steppable> st=this.getSteppables();
 		int asd = st.size();									
 		for(int i=0; i<asd; i++) {
+			if(i>=this.getSteppables().size()) break;
 			st.get(i).step();
 		}
 	}
