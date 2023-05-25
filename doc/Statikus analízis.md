@@ -14,4 +14,8 @@ Le Ngoc Thai:
 
 Ficher Balázs:
 
+A SonarCloud analízis után láttuk a komolyabb Bugokat, illetve CodeSmelleket, melyek közül az én feladatom, a MainFrame-et érintő hibák javítása volt,
+itt a bugok nagyrészét az = operátor használata adta, melyet equals függvényre cseréltem, ami már megfelelő volt, illetve néhány CodeSmellt is javítottam.
+A további CodeSmellek kiemelkedő részét stringbuilder használatával lehetett volna javítani, de ennek implementálását nem láttuk szükségesnek.
+
 ![vegleges-eredmeny](./final.PNG)
