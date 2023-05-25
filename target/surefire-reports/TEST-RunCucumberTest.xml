@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="RunCucumberTest" time="0.182" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="RunCucumberTest" time="0.209" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="HU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\titko\AppData\Local\Temp\surefire14835344729978465411\surefirebooter2266359731528058728.jar C:\Users\titko\AppData\Local\Temp\surefire14835344729978465411 2023-05-25T12-30-39_869-jvmRun1 surefire12321553151743353208tmp surefire_016706447858494403829tmp"/>
+    <property name="sun.java.command" value="C:\Users\titko\AppData\Local\Temp\surefire10895602096224324487\surefirebooter18418264000110787584.jar C:\Users\titko\AppData\Local\Temp\surefire10895602096224324487 2023-05-25T14-23-04_814-jvmRun1 surefire12243386594063174954tmp surefire_02163881975930879457tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\BME\Integrációs\HF\iet-hf-2023-vilagtalan-varazslok\target\test-classes;C:\BME\Integrációs\HF\iet-hf-2023-vilagtalan-varazslok\target\classes;C:\Users\titko\.m2\repository\io\cucumber\cucumber-java\7.12.0\cucumber-java-7.12.0.jar;C:\Users\titko\.m2\repository\io\cucumber\cucumber-core\7.12.0\cucumber-core-7.12.0.jar;C:\Users\titko\.m2\repository\io\cucumber\cucumber-gherkin\7.12.0\cucumber-gherkin-7.12.0.jar;C:\Users\titko\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.12.0\cucumber-gherkin-messages-7.12.0.jar;C:\Users\titko\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\titko\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\titko\.m2\repository\io\cucumber\tag-expressions\5.0.1\tag-expressions-5.0.1.jar;C:\Users\titko\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\titko\.m2\repository\io\cucumber\datatable\7.12.0\datatable-7.12.0.jar;C:\Users\titko\.m2\repository\io\cucumber\cucumber-plugin\7.12.0\cucumber-plugin-7.12.0.jar;C:\Users\titko\.m2\repository\io\cucumber\docstring\7.12.0\docstring-7.12.0.jar;C:\Users\titko\.m2\repository\io\cucumber\html-formatter\20.3.0\html-formatter-20.3.0.jar;C:\Users\titko\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\titko\.m2\repository\io\cucumber\ci-environment\9.2.0\ci-environment-9.2.0.jar;C:\Users\titko\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\titko\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.12.0\cucumber-junit-platform-engine-7.12.0.jar;C:\Users\titko\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\titko\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\titko\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\titko\.m2\repository\org\junit\platform\junit-platform-suite\1.9.3\junit-platform-suite-1.9.3.jar;C:\Users\titko\.m2\repository\org\junit\platform\junit-platform-suite-api\1.9.3\junit-platform-suite-api-1.9.3.jar;C:\Users\titko\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.9.3\junit-platform-suite-engine-1.9.3.jar;C:\Users\titko\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.9.3\junit-platform-suite-commons-1.9.3.jar;C:\Users\titko\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;C:\Users\titko\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\Users\titko\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\titko\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\Users\titko\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\titko\AppData\Local\Temp\surefire14835344729978465411\surefirebooter2266359731528058728.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\titko\AppData\Local\Temp\surefire10895602096224324487\surefirebooter18418264000110787584.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.7+8-LTS-224"/>
@@ -56,5 +56,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="Virologist moves from a field to another" classname="ProjLabVilagtalan.RunCucumberTest" time="0.048"/>
+  <testcase name="Created antistun agent expires after 3 ticks" classname="ProjLabVilagtalan.RunCucumberTest" time="0.055"/>
+  <testcase name="Virus bounces back but breaks the gloves" classname="ProjLabVilagtalan.RunCucumberTest" time="0.005"/>
+  <testcase name="Antichorea is used on second virologist" classname="ProjLabVilagtalan.RunCucumberTest" time="0.005"/>
+  <testcase name="Used virus doesn&apos;t affect anyone" classname="ProjLabVilagtalan.RunCucumberTest" time="0.004"/>
+  <testcase name="Used virus bounces back from gloved virologist" classname="ProjLabVilagtalan.RunCucumberTest" time="0.004"/>
+  <testcase name="Virologist moves from a field to another" classname="ProjLabVilagtalan.RunCucumberTest" time="0.003"/>
+  <testcase name="Virologist moves from a field to another by chorea" classname="ProjLabVilagtalan.RunCucumberTest" time="0.004"/>
 </testsuite>
