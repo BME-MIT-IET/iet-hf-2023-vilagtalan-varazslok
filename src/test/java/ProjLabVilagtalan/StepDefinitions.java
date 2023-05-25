@@ -15,19 +15,26 @@ class IsItFriday {
 
 public class StepDefinitions {
 
-    private String today;
-    private String actualAnswer;
+    private Field f1;
+    private Field f2;
+    private Virologist v1;
 
-    @Given("today is Sunday")
-    public void today_is_sunday() {
-        today = "Sunday";
+    @Given("There are two fields that are neighbours and a there is a virologist on the first field")
+    public void two_field_and_virologist() {
+        f1 = new Field();
+        f2 = new Field();
+        f1.addNeighbour(f2);
+        f2.addNeighbour(f1);
+        v1 = new Virologist();
+        v1.move(f1);
     }
-    @When("I ask whether it's Friday yet")
-    public void i_ask_whether_it_s_friday_yet() {
-        actualAnswer = IsItFriday.isItFriday(today);
+    @When("The virologist moves to the other field")
+    public void the_virologist_moves() {
+        v1.move(f2);
     }
-    @Then("I should be told {string}")
-    public void i_should_be_told(String string) {
-        assertEquals(string, actualAnswer);
+    @Then("The virologist should appear on the other field")
+    public void virologist_is_on_f2() {
+        assertEquals(v1.getField(), f2);
+        assertEquals(f2.getVirologists().get(0), v1);
     }
 }
