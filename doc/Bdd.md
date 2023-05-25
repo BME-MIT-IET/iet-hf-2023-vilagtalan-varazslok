@@ -48,6 +48,20 @@ A következő teszteket készítettem el:
     Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy cselekvésképtelenül nem lehet lopni.
 
 
+Le Ngoc Thai: </br>
+A következő teszteket készítettem el:
+1. virologist_cannot_move </br>
+    Virológus megpróbál megpróbál egy másik mezőre lépni de bénítás hatás alatt áll. </br>
+    Leírás:A virológus egy mezőre próbál lépni, de nem tud mert egy vírus hatása alatt áll. </br>
+    Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy a virológus nem tud továbblépni egy másik mezőre
+2. virologist_pickup_backpack </br>
+    Virológus felvesz egy hátizsákot itemnek. </br>
+    Leírás: A virológus a shelter mezőre lép és felveszi a hátizsákot. </br>
+    Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy sikeresen felveszi a hátizsákot, ha az adott mezőre lép.
+3. virologist_cannot_pickup_another_backpack </br>
+    Nem lehet egy virológusnak két ugyanolyan itemje </br>
+    Leírás:A virológus már rendelkezik egy hátizsákkal, de megpróbál mégegy hátizsákot felvenni. </br>
+    Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy csak egy hátizsákkal rendelkezhet a virológus.
 
 
 
