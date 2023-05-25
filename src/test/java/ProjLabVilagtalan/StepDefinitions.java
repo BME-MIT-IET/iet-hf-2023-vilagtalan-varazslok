@@ -7,11 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import io.cucumber.java.en.Given;
 
-class IsItFriday {
-    static String isItFriday(String today) {
-        return "Nope";
-    }
-}
 
 public class StepDefinitions {
 
