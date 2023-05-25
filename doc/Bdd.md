@@ -32,7 +32,20 @@ Majd megírtam a következő teszteket:
     Leírás: Egy virológusnál van egy legyártott AntiStun, az lejár és eltűnik. </br>
     Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy a lejáró ágensek eltűnnek.
 
-
+Pósa Tamás Márton: </br>
+A következő teszteket készítettem el:
+1. virologist_can't_learn_something_twice </br>
+    Virológus megpróbál olyan ágenst tanulni, amit már ismer, így nem tanulja meg mégegyszer </br>
+    Leírás: A virológus egy laboratóriumban van, Choreát és AntiChoreát tanulna, de már ismeri őket, így nem tanulja meg őket még egyszer. </br>
+    Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy a virológus egyszerre csak egyszer ismerje az ágenseit.
+2. virologist_steals </br>
+    Virológus lop egy lebénult virológustól </br>
+    Leírás: Két virológus van ugyanazon mezőn, az egyikük Stun hatása alatt, van nála egy köpeny és egy zsák, a másiknál egy zsák. Aki nem bénult, lop a másiktól: az anyagait és a köpenyt, a zsákot nem, mert már volt nála egy. </br>
+    Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy lehet lopni egy bénult virológustól, és hogy a lopás megfelelően működik.
+3. virologist_cannot_steal </br>
+    Bénultan nem működik a lopás </br>
+    Leírás: Két virológus van ugyanazon mezőn, mindkettő Stun hatása alatt, az egyiknél van egy köpeny, a másik lopni próbál, de nem tud. </br>
+    Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy cselekvésképtelenül nem lehet lopni.
 
 
 
