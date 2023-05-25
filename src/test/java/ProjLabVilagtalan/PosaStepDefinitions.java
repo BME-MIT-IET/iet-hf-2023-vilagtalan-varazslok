@@ -5,10 +5,8 @@ import io.cucumber.java.en.When;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.sql.Array;
 import java.util.ArrayList;
 
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Given;
 
 public class PosaStepDefinitions {
