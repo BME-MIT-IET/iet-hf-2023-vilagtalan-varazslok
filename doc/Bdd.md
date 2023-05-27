@@ -78,6 +78,28 @@ A következő teszteket készítettem el:
     Leírás: Egy virológus a szomszédos mezőről egy medve mezőjére lép. Van nála egy balta, azzal automatikusan megöli a medvét. </br>
     Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy a végén a mezőn csak egy virológus van, és ő a baltás.
 
+
+Fischer Balázs </br>
+A következő teszteket készítettem el:
+1. virologist_uses_Forget_virus</br>
+    Virológus létrehoz egy Forget vírust, majd egy másik játékoson alkalmazza azt</br>
+    Leírás: A virológus használja a Forget vírust, melynek hatására a másik virológus elfelejti az ágenseit</br>
+    Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy a fertőzött virológus által eddig ismert vírusok száma nullázódik
+2. virologist_uses_Forget_on_AntiForget </br>
+    Virológus létrehoz egy Forget vírust, majd egy másik játékoson alkalmazza azt, aki be van oltva ellene</br>
+    Leírás: A virológus használja a Forget vírust, melynek hatására a másik virológussal nem történik semmi, mert be van oltva</br>
+    Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy a fertőzött virológus által eddig ismert vírusok száma nem változik
+3. virologist_uses_Stun_on_AntiStun </br>
+    Virológus létrehoz egy Stun vírust, majd egy másik játékoson alkalmazza azt, aki be van oltva ellene</br>
+    Leírás: A virológus használja a Stun vírust, melynek hatására a másik virológussal nem történik semmi, mert be van oltva</br>
+    Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy a fertőzött virológuson nem jelenik meg új fertőzés
+4. virologist_uses_Chorea_on_AntiChorea </br>
+    Virológus létrehoz egy Chorea vírust, majd egy másik játékoson alkalmazza azt, aki be van oltva ellene</br>
+    Leírás: A virológus használja a Chorea vírust, melynek hatására a másik virológussal nem történik semmi, mert be van oltva</br>
+    Ellenőrzött funkcionalitás: Annak ellenőrzése, hogy a fertőzött virológuson nem jelenik meg új fertőzés
+
+
+
 A tesztelés közben belefutottunk, hogy bizonyos feltételek, Cucumber-es state definition-ök többször is újra felhasználhatóak lennének. Azonban egyszerre dologztunk a feladaton, és így a bonyolultabb merge conflictok elkerülése érdekében inkább mindenki külön hozta létre ezeket a definíciókat. Ez azt eredményezte, hogy bizonyos definíciókat más néven újra kellett írni, és csak egyénenként tudtuk újra felhasználni őket. Talán jobb lett volna mindent egy fájlban, vagy csak lokális változókkal kezelni az újrahasználhatóság érdekében. </br>
 Illetve javítottam egy kisebb hibát, amikor Timer tick függvényében a for ciklus túlindexelte magát, adtam bele egy plusz peremfeltételt.
 
