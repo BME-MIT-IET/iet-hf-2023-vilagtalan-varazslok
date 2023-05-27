@@ -1,7 +1,7 @@
 Baczó Domonkos: </br>
 A manuális teszteléshez a dokumentáció use case-ein mentünnk végig. </br>
 A játék kezelőfelülete:
-![](map.png)
+![](./map.PNG)
 
 1. Mozgás </br>
 ![](./m1.PNG) </br>
