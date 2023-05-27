@@ -124,3 +124,27 @@ Teszt eredménye: sikeres, a kesztyű sikeresen kivédte, csökkentette a maxim�
 Teszt előkészítése: új játék indítása 2 játékossal, az elsőt egy laboratóriumba (kék mező), majd kesztyűhöz (sárga mező, ha köpenyt vesz fel, újra kell kezdeni) navigálni, a másodikat pedig egy kesztyűhöz (sárga mező, ha köpenyt vesz fel, újra kell kezdeni). Az első elkészíti a vírust (Create agent). </br>
 Tesztelési terv: Az első virológus a másodikra keni a vírusát (Use virus).</br>
 Teszt eredménye: sikeres, a vírus eltűnt és mindkét kesztű vesztett egyet a tartósságából. </br></br>
+
+</br></br>Fischer Balázs: </br>
+
+18. A virológus vakcinát használ</br>
+![](m18.png) </br>
+
+Teszt előkészítése: új játék indítása 1 játékossal, a játékos elnavigál egy laboratóriumra, mely egy kék mező, ott felveszi az itt található ágenst, amelyet le is gyárt magának </br>
+Tesztelési terv: A virológus magára alkalmazza a vakcinát (Use vaccine).</br>
+Teszt eredménye: sikeres, a vakcina hatása megjelent a virológuson. </br></br>
+
+19. A vitustánc vírus működése</br>
+![](m19.png) </br>
+
+Teszt előkészítése: új játék indítása 2 játékossal, a mindkét játékos elnavigál egy laboratóriumra, mely egy kék mező, ott az egyik felveszi az itt található ágenst (Chorea), amelyet le is gyárt magának, majd használja a másik virológuson</br>
+Tesztelési terv: A megfertőzött virológus kpételen mozogni, random mezőre lép, majd a köre végén csökken a vírus időtartama</br>
+Teszt eredménye: sikeres, a vírus időtartama csökkent, a játékos nem tud irányítottan mozogni.</br></br>
+
+
+20. A virológus vakcinája lejár</br>
+![](m20.png) </br>
+
+Teszt előkészítése: új játék indítása 1 játékossal, a játékos elnavigál egy laboratóriumra, mely egy kék mező, ott felveszi az itt található ágenst, amelyet le is gyárt magának, és használja önmagán </br>
+Tesztelési terv: A virológus mozog a pályán és lejár a vakcinája adott időn belül</br>
+Teszt eredménye: sikeres, a vakcina hatása eltűnt a virológusról.</br></br>
