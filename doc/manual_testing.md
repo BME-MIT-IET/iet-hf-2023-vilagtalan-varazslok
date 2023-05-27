@@ -87,3 +87,34 @@ Teszt előkészítése: Új játék indítása 2 játékossal. Az első játéko
 Tesztelési terv: Az első játékossal a *Use virus* gomb mellett kiválasztjuk a használni kívánt vírust és a célpontot, majd megnyomjuk a gombot. </br>
 Teszt eredménye: Sikeres, az első virológus ágene elhasználódott, a második virológuson pedig van egy aktív vírus. </br>
 
+
+</br></br>Pósa Tamás Márton: </br>
+
+14. Vakcina véd </br>
+![](m14.png) </br>
+
+Teszt előkészítése: új játák indítása 2 játékossal, mindkettőt eljuttatni azonos laboratóriumba (kék mező)</br>
+Tesztelési terv: Az egyik virológus vakcinát gyárt (Create agent) és ken magára (Use vaccine), míg a másik vírust gyárt (Create agent) és az előzőre keni (Use virus). </br>
+Teszt eredménye: sikeres, a vakcinával rendelkező virológus nem kapta meg a vírust.</br></br>
+
+15. Köpeny használat</br>
+![](m15.png) </br>
+
+Teszt előkészítése: új játék indítása 2 játékossal, az elsőt egy laboratóriumba (kék mező) navigálni, a másodikat pedig egy köpenyhez (sárga mező, ha kesztűt vesz fel, újra kell kezdeni). Az első elkészíti a vírust (Create agent). </br>
+Tesztelési terv: Az első virológus a másodikra keni a vírusát (Use virus).</br>
+Teszt eredménye: sikerers, a köpeny sikeresen kivédte a vírust (ennek volt nagyobb az esélye). </br></br>
+
+16. Egy kesztyű használata</br>
+![](m16_1.png)
+![](m16_2.png) </br>
+
+Teszt előkészítése: új játék indítása 2 játékossal, az elsőt egy laboratóriumba (kék mező) navigálni, a másodikat pedig egy kesztyűhöz (sárga mező, ha köpenyt vesz fel, újra kell kezdeni). Az első elkészíti a vírust (Create agent). </br>
+Tesztelési terv: Az első virológus a másodikra keni a vírusát (Use virus).</br>
+Teszt eredménye: sikeres, a kesztyű sikeresen kivédte, csökkentette a maximális használatát és visszakente a vírust az időtartam felével. </br></br>
+
+17. Két kesztyű használata</br>
+![](m17.png) </br>
+
+Teszt előkészítése: új játék indítása 2 játékossal, az elsőt egy laboratóriumba (kék mező), majd kesztyűhöz (sárga mező, ha köpenyt vesz fel, újra kell kezdeni) navigálni, a másodikat pedig egy kesztyűhöz (sárga mező, ha köpenyt vesz fel, újra kell kezdeni). Az első elkészíti a vírust (Create agent). </br>
+Tesztelési terv: Az első virológus a másodikra keni a vírusát (Use virus).</br>
+Teszt eredménye: sikeres, a vírus eltűnt és mindkét kesztű vesztett egyet a tartósságából. </br></br>
