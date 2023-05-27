@@ -38,3 +38,28 @@ Teszt eredménye: sikeres, a nyersanyagok között megjelent még 50 aminosav.</
 
 
 
+Motyovszki András: </br>
+
+10. Lopás </br>
+![](m10.png) </br>
+Teszt előkészítése: Új játék indítása 2 játékossal. Az egyik játékost elnavigáljuk egy óvóhelyre, ahol a *Pick up* gombra nyomva felveszünk vele egy tárgyat (ne *Gloves* vagy *Cape* legyen). A másik játékost laborokba navigáljuk, hogy megtanulja a *Stun* vagy *Chorea* ágenst. Ezután a két játékost azonos mezőre navigáljuk. </br>
+Tesztelési terv: A második játékossal (akivel nem vettünk fel tárgyat) készítünk egy *Stun* vírust (*Create agent* gomb) kiválasztjuk a *User virus* gomb mellet célpontot, majd megnyomjuk a gombot. Majd kiválasztjuk a *Steal gomb mellett a célpontot és megnyomjuk a gombot.</br>
+Teszt eredménye: Sikeres, a második játékosnál van az első összes anyaga, és tárgya. </br>
+
+11. Ágens létrehozása </br>
+![](m11.png) </br>
+Teszt előkészítése: Új játék kezdése 1 játékossal. A játékost egy laborba navigáljuk, ahol a *Pick up* gomb megnyomásával megtanulja az ott található ágenst. </br>
+Tesztelési terv: A *Create agent* gomb mellett kiválasztjuk a létrehozni kívánt ágenst, majd megnyomjuk a gombot. </br>
+Teszt eredménye: Sikeres, a játékosnál megjelent, hogy van egy elkészített ágense, és csökkent az anyagkészlete. </br>
+
+12. Nincs elég anyag ágens létrehozásához </br>
+![](m12.png) </br>
+Teszt előkészítése: Új játék indítása 1 játékossal. A játékost egy laborba navigáljuk, ahol a *Pick up* gomb megnyomásával megtanulja az ott található ágenst. A *Create agent* gombot megnyomva létrehozunk egy ágenst, hogy csökkentjen a virológus anyagkészlete. </br>
+Tesztelési terv: Megnyomjuk még egyszer a *Create agent* gombot. </br>
+Teszt eredménye: Sikeres, nem jött létre új ágens. </br>
+
+13. Vírus használata </br>
+![](m13.png) </br>
+Teszt előkészítése: Új játék indítása 2 játékossal. Az első játékost egy laborba navigáljuk, ahol a *Pick up* gomb megnyomásával megtanul egy ágenst. Ezután a két játékost azonos mezőre navigáljuk. Az első játékossal létrehozunk egy vírust, a *Create agent* gomb mellett kiválasztjuk, majd megnyomjuk a gombot. </br>
+Tesztelési terv: Az első játékossal a *Use virus* gomb mellett kiválasztjuk a használni kívánt vírust és a célpontot, majd megnyomjuk a gombot. </br>
+Teszt eredménye: Sikeres, az első virológus ágene elhasználódott, a második virológuson pedig van egy aktív vírus. </br>
