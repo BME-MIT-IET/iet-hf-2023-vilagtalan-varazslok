@@ -36,6 +36,29 @@ Teszt előkészítése: új játék indítása 1 játékossal</br>
 Tesztelési terv: A Move gombbal elnavigálunk egy piros mezőre (aminosav-raktár),a pick up gombbal felvesszük.</br>
 Teszt eredménye: sikeres, a nyersanyagok között megjelent még 50 aminosav.</br>
 
+Le Ngoc Thai: </br>
+
+7. Ágens tanulás </br>
+![](m7.png)
+
+Teszt előkészítése: Új játék indítása 1 játékossal </br>
+Tesztelési terv: A játékossal elnavigálunk a laboratóriumba, és ha nincs medve akkor a pick up gombra kattintva megtanulhatja az ágenst. </br>
+Teszt eredménye: Sikeres, valóban megtanult egy ágenst.
+
+8. Győzelem </br>
+![](m8.png)
+
+Teszt előkészítése: Új játék indítása 1 játékossal </br>
+Tesztelési terv: A játékossal elmegyünk az óvóhelyekre,amíg nem találunk baltát, mert ez kell a medve legyőzéséhez.Minden óvóhelyen a pick up gombra kattintva felvesszük az itemeket.A medve egy véletlenszerű laboratóriumba van.Majd utána minden laboratóriumba elnavigálunk és megtanuljuk az ágenseket. Ha megtanultuk őket akkor megnyertük a játékot </br>
+Teszt eredménye: Sikeres, valóban véget ért játék.
+
+9. Nem tud lopni </br>
+![](m9.png)
+
+Teszt előkészítése: Új játék indítása 2 játékossal </br>
+Tesztelési terv:</br>
+Teszt eredménye: Sikeres, valóban nem sikerült lopni egy másik játékostól.
+
 
 
 Motyovszki András: </br>
@@ -63,3 +86,4 @@ Teszt eredménye: Sikeres, nem jött létre új ágens. </br>
 Teszt előkészítése: Új játék indítása 2 játékossal. Az első játékost egy laborba navigáljuk, ahol a *Pick up* gomb megnyomásával megtanul egy ágenst. Ezután a két játékost azonos mezőre navigáljuk. Az első játékossal létrehozunk egy vírust, a *Create agent* gomb mellett kiválasztjuk, majd megnyomjuk a gombot. </br>
 Tesztelési terv: Az első játékossal a *Use virus* gomb mellett kiválasztjuk a használni kívánt vírust és a célpontot, majd megnyomjuk a gombot. </br>
 Teszt eredménye: Sikeres, az első virológus ágene elhasználódott, a második virológuson pedig van egy aktív vírus. </br>
+
