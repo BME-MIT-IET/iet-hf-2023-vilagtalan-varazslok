@@ -38,6 +38,12 @@ Teszt eredménye: sikeres, a nyersanyagok között megjelent még 50 aminosav.</
 
 Le Ngoc Thai: </br>
 
+6. Nukleotid felvétel </br>
+![](m6.png) </br>
+Teszt előkészítése: új játék indítása 1 játékossal</br>
+Tesztelési terv: A Move gombbal elnavigálunk egy rózsaszín mezőre (nukleotid-raktár),a pick up gombbal felvesszük.</br>
+Teszt eredménye: sikeres, a nyersanyagok között megjelent még 50 nukleotidsav.
+
 7. Ágens tanulás </br>
 ![](m7.png)
 
